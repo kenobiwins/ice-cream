@@ -1,0 +1,16 @@
+.modal {
+  width: 528px;
+  padding: 40px;
+
+  background-color: var(--background-primary-color);
+  box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
+    0px 1px 3px 0px #0000001f;
+
+  border: none;
+  border-radius: 4px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
