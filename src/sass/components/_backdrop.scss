@@ -1,0 +1,14 @@
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  z-index: 120;
+
+  visibility: visible;
+  opacity: 1;
+
+  background-color: #00000033;
+
+  //   transition: opacity var(--transition), visibility var(--transition);
+}
