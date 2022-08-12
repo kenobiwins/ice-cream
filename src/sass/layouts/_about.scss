@@ -1,7 +1,73 @@
-section {
-  background-color: aqua;
+.about {
+  background-color: var(--background-section-primary);
 }
-.slick-dots li.slick-active button:before {
-  opacity: 0.75;
-  color: palegoldenrod;
+.about__top-title {
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.17;
+  
+  text-align: center;
+  text-transform: uppercase;
+
+  margin-bottom: 15px;;
+  
+  color: var(--label-color);
+}
+
+.about__title {
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.15;
+
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  margin-bottom: 32px;
+  
+  color: var(--accent-font-color);
+}
+
+.about__item {
+  width: 220px;
+}
+
+.about__top-text {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.58;  
+
+  margin-bottom: 40px;
+  
+  color: var(--text-color);
+}
+.about-text {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.58;
+  
+    color: var(--text-secondary-color);
+}
+.about__btn {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+  display: flex;
+  align-items: center;
+  text-align: center; 
+
+  background-color: var(--white-color);
+  border-radius: 22px;
+  
+  color: var(--accent-font-color);
 }
