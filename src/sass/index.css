@@ -91,7 +91,7 @@ a {
   padding-right: 15px;
 }
 
-.about__top-title {
+.about__label {
   font-family: "Titan One";
   font-style: normal;
   font-weight: 400;
@@ -123,7 +123,7 @@ a {
 }
 
 @media screen and (max-width: 767px) {
-  .about__inro {
+  .about__info {
     margin-left: 32px;
   }
 }
@@ -195,7 +195,7 @@ section {
   padding-right: 15px;
 }
 
-.about__top-title {
+.about__label {
   font-family: "Titan One";
   font-style: normal;
   font-weight: 400;
@@ -227,7 +227,7 @@ section {
 }
 
 @media screen and (max-width: 767px) {
-  .about__inro {
+  .about__info {
     margin-left: 32px;
   }
 }
