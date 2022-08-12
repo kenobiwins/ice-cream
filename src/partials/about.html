@@ -1,31 +1,41 @@
 <section class="about">
   <!--                         ABOUT               -->
-  <div class="container">
+  <div class="about__container container">
     <p class="about__top-title">tradition and love</p>
     <h2 class="about__title">how it’s made?</h2>
-    <ul class="about__list">
-      <li class="about__item">
-        <p class="about__top-text">
-          Fusce ut velit laoreet, tempus arcu eu,
-          molestie tortor.npm start
-          Nam vel justo cursus,
-          faucibus lorem eget, egestas eros.
-          Maecenas eleifend erat at justo fringilla.</p>
-      </li>
-      <li class="about__item">
-        <P class="about-text">
-          Curabitur lacinia enim at ex blandit,
-          vel pellentesque odio elementum.
-          Mauris rhoncus orci in imperdiet
-          placerat. Vestibulum euismod nisl
-          suscipit ligula volutpat, a feugiat urna
-          maximus. Cras massa nibh, tincidunt.
-
-          Aliquam erat volutpat. Aenean accumsan.</P>
-      </li>
-    </ul>
-    <button class="about__btn" type="button" data-modal-open>Read more</button>
+    <div class="about__tablet">
+        <picture>
+          <source srcset="
+              ./images/about/cow-mob-1x.png 1x,
+              ./images/about/cow-mob-2x.png 2x" media="(min-width: 320px)">
+          <img src="./images/about/cow-mob-1x.png" alt="a cow and a jug of milk" width="501" height="501">
+        </picture>
+        <div class="about__inro">
+          <ul class="about__list">
+            <li class="about__item">
+              <p class="about__top-text">
+                Fusce ut velit laoreet, tempus arcu eu,
+                molestie tortor.npm start
+                Nam vel justo cursus,
+                faucibus lorem eget, egestas eros.
+                Maecenas eleifend erat at justo fringilla.</p>
+            </li>
+            <li class="about__item">
+              <p class="about-text">
+                Curabitur lacinia enim at ex blandit,
+                vel pellentesque odio elementum.
+                Mauris rhoncus orci in imperdiet
+                placerat. Vestibulum euismod nisl
+                suscipit ligula volutpat, a feugiat urna
+                maximus. Cras massa nibh, tincidunt.
+          
+                Aliquam erat volutpat. Aenean accumsan.</p>
+            </li>
+          </ul>
+          <button class="about__btn btn" type="button" data-modal-open>Read more</button>
+        </div>
+        
+    </div>
+  
   </div>
-</section>
-
 </section>

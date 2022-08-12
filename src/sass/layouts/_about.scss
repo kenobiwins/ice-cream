@@ -1,6 +1,10 @@
 .about {
   background-color: var(--background-section-primary);
 }
+.about__container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 .about__top-title {
   font-family: 'Titan One';
   font-style: normal;
@@ -32,6 +36,18 @@
   color: var(--accent-font-color);
 }
 
+.about__tablet {
+  @include mq(tablet) {
+    display: flex;
+  }
+}
+
+.about__inro {
+  @include mq(mobile) {
+    margin-left: 32px;
+  }
+  
+}
 .about__item {
   width: 220px;
 }
@@ -54,7 +70,9 @@
   font-size: 12px;
   line-height: 1.58;
   
-    color: var(--text-secondary-color);
+  margin-bottom: 20px;
+  
+  color: var(--text-secondary-color);
 }
 .about__btn {
   font-family: 'DM Sans';
@@ -62,12 +80,13 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 1.29;
-  display: flex;
   align-items: center;
   text-align: center; 
 
   background-color: var(--white-color);
   border-radius: 22px;
+  width: 176px;
+  height: 44px;
   
   color: var(--accent-font-color);
 }
