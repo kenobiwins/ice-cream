@@ -44,7 +44,11 @@ body {
     box-shadow: 0px 3px 6px 1px var(--reverse-background-button);
   }
 }
-
+.button--arrow {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
 .title {
   font-family: 'Titan One', cursive;
   color: var(--title-color);
