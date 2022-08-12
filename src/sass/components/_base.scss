@@ -9,3 +9,75 @@
     );
   }
 }
+
+.button {
+  padding: 11px 24px;
+
+  font-family: 'DM Sans', sans-serif;
+  @include fonts(16px, 21px, 700);
+  color: var(--text-button);
+  background-color: var(--background-button);
+  cursor: pointer;
+
+  border: none;
+  border-radius: 22px;
+  transition: color var(--transition), background-color var(--transition);
+
+  &:hover,
+  &:focus {
+    background-color: var(--background-button-hover);
+  }
+}
+.button--red {
+  color: var(--reverse-text-button);
+  background-color: var(--reverse-background-button);
+
+  &:hover,
+  &:focus {
+    color: var(--text-button);
+    background-color: var(--background-button);
+    box-shadow: 0px 3px 6px 1px var(--reverse-background-button);
+  }
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  @include fonts(16px, 30px, 500, 0.04em);
+}
+
+.title {
+  font-family: 'Titan One', cursive;
+  color: var(--title-color);
+  @include mq(mobile) {
+    @include fonts(34px, 39px, 400, 0.04em);
+  }
+  @include mq(tablet) {
+    @include fonts(48px, 55px, 400, 0.04em);
+  }
+  @include mq(desktop) {
+    @include fonts(58px, 66px, 400, 0.06em);
+  }
+}
+
+.label-title {
+  font-family: 'Titan One', cursive;
+  color: var(--label-color);
+  @include mq(mobile) {
+    @include fonts(18px, 21px, 400);
+  }
+  @include mq(tablet) {
+    @include fonts(26px, 30px, 400);
+  }
+  @include mq(desktop) {
+    @include fonts(30px, 34px, 400, 0.04em);
+  }
+}
+
+.link {
+  display: block;
+  transition: color var(--transition);
+  &:hover,
+  &:focus {
+    color: var(--accent-font-color);
+  }
+}
