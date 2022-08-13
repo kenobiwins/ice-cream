@@ -4,8 +4,7 @@ background-color: var(--background-primary-color);
 .hero__container{
   position: relative;
 
-  height: 100vh;
-  
+  height: 502px;  
   overflow: hidden;
 }
 
@@ -13,7 +12,6 @@ background-color: var(--background-primary-color);
   position: absolute;
   top: 194px;
    z-index: 4;
-
 }
 
 .title__hero{
@@ -23,15 +21,15 @@ font-size: 26px;
   text-transform: uppercase;
   margin-bottom: 20px;
 
-  &--color {
-    
+  &--color {    
     color: var(--white-color);
   }
   &--size{
-font-size: 48px;
+  font-size: 48px;
   line-height: 0.97;
   }
 }
+
 .hero__button{
   font-size: 8px;
     line-height: 1.25;
@@ -39,22 +37,113 @@ font-size: 48px;
 }
 
 .hero__circle{
-  position: absolute;
-  
-top: 83px;
-left: 36px;
+  position: absolute;  
+    top: 83px;
+    left: 36px;
   width: 346px;
   height: 344px;
   border-radius: 50%;
   background-color: var(--background-secondary-color);
-
-  
 }
 
-
-.ice-cream{
+.hero__ice-cream{
   position: absolute;
   top: 92px;
   left: 35%;
   z-index: 3;
+}
+@media screen and(max-width:767.9px) {
+  
+  .hero__milk{
+    display: none;
+  }
+  .hero__girl{
+    display: none;
+  }
+  .hero__lorem{
+    display: none;
+  }
+  .hero__cafes{
+    display: none;
+  }
+  .food-trucks{
+    display: none;
+  }
+  
+  }
+@media screen and(min-width:768px) {
+  .hero__container {
+      height: 416px;  
+  }
+
+  .title__hero{
+  width:162px ;
+  font-size: 22px;
+  line-height: 1.14;
+  text-transform: uppercase;
+    
+    &--size{
+    font-size: 34px;
+    line-height: 0.9;
+    }
+  }
+
+  .hero__title-wrapper {
+    top: 102px;    
+  }
+
+    .hero__ice-cream {
+      position: absolute;
+      bottom: 0;
+      left: 322;
+      z-index: 3;
+    }
+    
+  .hero__milk {
+    position: absolute;
+    left: 32px;
+    bottom: 16;
+  }
+
+  .hero__girl {
+    position: absolute;
+    right: 32px;
+    bottom: 0;
+    z-index: 6;
+  }
+  .hero__lorem {      
+  position: absolute;
+  left: 184px;
+  bottom: 56px;
+  }
+    .hero__disc-arrow{
+      width: 114px;
+      font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 1.5;
+        color: var(--white-color);
+
+    }
+  
+  // .hero__cafes {
+  //   display: none;
+  // }
+  
+  // .food-trucks {
+  //   display: none;
+  // }
+
+  .hero__circle {
+      position: absolute;
+      top: 43px;
+      left: 248px;
+      width: 335px;
+      height: 333px;
+  }
+}
+
+@media screen and(min-width:1200px) {
+
 }
