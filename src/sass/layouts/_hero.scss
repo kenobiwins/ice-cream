@@ -1,3 +1,60 @@
-section {
-  background-color: palegoldenrod;
+.hero{
+background-color: var(--background-primary-color);
+}
+.hero__container{
+  position: relative;
+
+  height: 100vh;
+  
+  overflow: hidden;
+}
+
+.hero__title-wrapper{
+  position: absolute;
+  top: 194px;
+   z-index: 4;
+
+}
+
+.title__hero{
+  width:218px ;
+font-size: 26px;
+  line-height: 1.15;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  &--color {
+    
+    color: var(--white-color);
+  }
+  &--size{
+font-size: 48px;
+  line-height: 0.97;
+  }
+}
+.hero__button{
+  font-size: 8px;
+    line-height: 1.25;
+    padding: 9px 14px;
+}
+
+.hero__circle{
+  position: absolute;
+  
+top: 83px;
+left: 36px;
+  width: 346px;
+  height: 344px;
+  border-radius: 50%;
+  background-color: var(--background-secondary-color);
+
+  
+}
+
+
+.ice-cream{
+  position: absolute;
+  top: 92px;
+  left: 35%;
+  z-index: 3;
 }
