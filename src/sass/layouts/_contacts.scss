@@ -1,14 +1,17 @@
 .contacts {
   background-image: linear-gradient(to bottom,var(--background-section-white)0%,var(--background-section-white)22%,var(--background-section-primary)22%,var(--background-section-primary)100%);
-
+  padding-top: 30px;
+  padding-bottom: 20px;
+  font-family: 'DM Sans';
 }
 
 .contacts__list {
-  display: flex;
-  flex-wrap: wrap;
   gap: 20px;
-
   margin-bottom: 32px;
+
+  @include mq(tablet) {
+    margin-bottom: 60px;
+  }
 }
 
 .contacts__item {
@@ -18,6 +21,12 @@
 
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
+}
+
+.card-set__item {
+  @include mq(tablet){
+    --items:3;
+}
 }
 
 .contacts__wrap {
@@ -32,12 +41,13 @@
   margin-bottom: 20px;
 
   @include fonts(12px, 22px, 500, 0.04em);
-  font-family: 'DM Sans';
   text-transform: uppercase;
 
   color: var(--white-color);
 
   border-radius: 4px;
+
+ 
 }
 
 .contacts__category--brown {
@@ -52,17 +62,30 @@
   margin-bottom: 8px;
 
   @include fonts(12px, 22px, 500, 0.04em);
-  font-family: 'DM Sans';
-
+  
   color: var(--text-color);
+
+  @include mq(tablet){
+    @include fonts(14px, 26px, 500, 0.04em);
+  }
+
+  @include mq(desktop){
+    @include fonts(16px, 30px, 500, 0.04em);
+  }
 }
 
 .contacts__text {
   @include fonts(12px, 18px, 500, 0.04em);
-  font-family: 'DM Sans';
-  font-weight: 500;
- 
+   
   color: var(--text-secondary-color);
+
+  @include mq(tablet){
+    @include fonts(14px, 23px, 500, 0.04em);
+  }
+
+  @include mq(desktop){
+    @include fonts(16px, 30px, 500, 0.04em);
+  }
 }
 
 .worktime__list {
@@ -77,16 +100,30 @@
 
 .worktime__days {
   @include fonts(12px, 22px, 500, 0.04em);
-  font-family: 'DM Sans';
-
+  
   color: var(--text-color);
+
+  @include mq(tablet){
+    @include fonts(14px, 26px, 500, 0.04em);
+  }
+
+  @include mq(desktop){
+    @include fonts(16px, 30px, 500, 0.04em);
+  }
 }
 
 .worktime__time {
-  font-family: 'DM Sans';
   @include fonts(12px, 22px, 500, 0.04em);
 
   color:var(--label-color);
+
+  @include mq(tablet){
+    @include fonts(14px, 26px, 500, 0.04em);
+  }
+
+  @include mq(desktop){
+    @include fonts(16px, 30px, 500, 0.04em);
+  }
 }
 
 .contacts__address {
@@ -95,11 +132,18 @@
   padding-top: 24px;
 
   @include fonts(12px, 18px, 500, 0.04em);
-  font-family: 'DM Sans';
-   
+     
   color: var(--text-secondary-color);  
 
   cursor: pointer;
+
+  @include mq(tablet){
+    @include fonts(14px, 26px, 500, 0.04em);
+  }
+
+  @include mq(desktop){
+    @include fonts(16px, 30px, 500, 0.04em);
+  }
 }
 
 .option__list {
@@ -107,26 +151,19 @@
   flex-direction: column;
   gap: 10px;
   align-items: center;
-}
 
-.option__button {
-  font-family: 'DM Sans';
-  @include fonts(16px, 21px, 700, 0.04em);
-  min-width: 144px;
-  height: 44px;
-
-  text-align: center;
-
-  color: var(--text-button);
-  background: var(--background-button);
-  border-radius: 22px;
-  border: transparent;
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    color: var(--reverse-text-button);
-    background-color: var(--reverse-background-button);
+  @include mq(tablet){
+    flex-direction: row;
+    justify-content: center;
+    gap:15px;
   }
 }
 
+.option__button {
+  min-width: 161px;
+  min-height: 44px;  
+
+  @include mq(tablet){
+    min-width: 171px;
+  }
+}
