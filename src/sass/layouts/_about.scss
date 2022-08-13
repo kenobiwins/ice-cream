@@ -1,18 +1,15 @@
 
 .about {
   background-color: var(--background-section-primary);
-  padding-top: 60px;
-  @include mq(mobile) {
-    padding-bottom: 40px;
-  }
+  padding-top: 20px;
   @include mq(tablet) {
-    padding-bottom: 60px;
+    padding-bottom: 30px;
   }
   @include mq(desktop) {
     background-image: url(../images/about/desktop/milk1.png);
     background-repeat: no-repeat;
-    background-position: center;
     background-position: bottom;
+    background-size: contain;
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
@@ -21,21 +18,19 @@
   }
 }
 
-.about__container {
-  padding-left: 15px;
-  padding-right: 15px;
-  @include mq(mobile) {
-    background-image: url(../images/about/mobile/milk1.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position: bottom 120px left 15px;
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-        background-image: url(../images/about/mobile/milk1@2x.png);
-      }
-    }
-}
+// .about__container {
+//   @include mq(mobile) {
+//     background-image: url(../images/about/mobile/milk1.png);
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     background-position: bottom 120px left 15px;
+//     @media (min-device-pixel-ratio: 2),
+//       (min-resolution: 192dpi),
+//       (min-resolution: 2dppx) {
+//         background-image: url(../images/about/mobile/milk1@2x.png);
+//       }
+//     }
+// }
 
 .about__label {
   text-align: center;
@@ -43,7 +38,6 @@
 
   margin-bottom: 15px;
 
-  color: var(--label-color);
 }
 
 .about__title {
@@ -59,22 +53,29 @@
 }
 
 .about__tablet {
+  @include mq(mobile) {
+    background-image: url(../images/about/mobile/milk1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: bottom 120px;
+  
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/about/mobile/milk1@2x.png);
+    }
+  }
   @include mq(tablet) {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 32px;
+  }
+  @include mq(desktop) {
+    gap: 99px;
   }
 }
 
-.about__info {
-  display: block;
-  @include mq(tablet) {
-    margin-left: 32px;
-  }
-  @include mq(desktop) {
-    margin-left: 99px;
-  }
-}
 
 .about__item {
   max-width: 220px;
@@ -100,21 +101,28 @@
     }
   color: var(--text-color);
 }
-
-.about-text {
-  font-family: 'DM Sans';
-  font-style: normal;
+.text {
   font-weight: 500;
   font-size: 12px;
   line-height: 1.58;
-
-  margin-bottom: 20px;
-
   color: var(--text-secondary-color);
+  @include mq(tablet) {
+      @include fonts(14px, 25px);
+    }
+  @include mq(desktop) {
+      @include fonts(14px, 27px);
+    }
+}
+
+.about__text-bottom {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  @include mq(tablet) {
+  margin-bottom: 40px;
+  }
 }
 
 .about__btn {
-  // font-weight: 700;
   font-size: 14px;
   line-height: 1.29;
   align-items: center;
