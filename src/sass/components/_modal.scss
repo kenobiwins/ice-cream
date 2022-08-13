@@ -23,7 +23,7 @@
   border-radius: 4px;
 
   position: absolute;
-  overflow: scroll;
+  overflow: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -230,27 +230,33 @@
   right: 10px;
   width: 30px;
   height: 30px;
-  fill: var(--reverse-background-button);
 
   border: 1px solid var(--reverse-background-button);
   border-radius: 50%;
+  box-shadow: 0px 0px 1px 0px var(--reverse-background-button);
 
   background-color: var(--background-primary-color);
+  transition: border-color var(--transition);
   cursor: pointer;
-  transition: border-color var(--reverse-background-button), var(--transition);
 
   &:hover,
   &:focus {
     color: var(--background-button-hover);
     border-color: var(--background-button-hover);
+    box-shadow: 0px 0px 3px 0px var(--background-button-hover),
+      0px 0px 3px 0px var(--background-button-hover),
+      0px 1px 1px 0px var(--background-button-hover);
+  }
+  &:hover &__icon,
+  &:focus &__icon {
+    fill: var(--background-button-hover);
   }
 
   &__icon {
     width: 11px;
     height: 11px;
-    fill: currentColor;
-
-    // fill: var(--label-color);
+    fill: var(--reverse-background-button);
+    transition: fill var(--transition);
   }
 }
 
