@@ -124,6 +124,10 @@
   }
 }
 
+.slick-dots {
+  bottom: -17px;
+}
+
 .slick-dots li:hover button:before {
   color: var(--review-accent);
 }
@@ -132,6 +136,8 @@
   font-size: 12px;
   color: var(--review-common);
   opacity: 1;
+
+  transition: color var(--transition);
 }
 
 .slick-dots li.slick-active button::before {
