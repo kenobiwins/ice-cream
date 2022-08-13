@@ -1,3 +1,61 @@
 section {
   background-color: darkgrey;
 }
+
+.section__label {
+  margin-bottom: 15px;
+
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--background-secondary-color);
+}
+
+.section__title {
+  margin-bottom: 148px;
+  line-height: 1.15;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--title-color);
+}
+
+.product {
+  position: relative;
+  background-color: var(--background-secondary-color);
+  border-radius: 24px;
+}
+
+.product::before {
+position: absolute;
+left: 0;
+top: 0;
+}
+
+.product__name {
+  margin-bottom: 70px;
+
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+.product__name::after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+
+  translate: transform(50% 50%);
+}
+
+.product__discr {
+  font-weight: 700;
+   font-size: 14px;
+   line-height: 1.52;
+   text-align: center;
+   color: var(--white-color);
+}
