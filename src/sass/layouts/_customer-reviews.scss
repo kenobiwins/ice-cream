@@ -1,3 +1,155 @@
-section {
-  background-color: beige;
+.reviews {
+  background-color: var(--white-color);
+  @include mq(mobile) {
+    @include section(30px, 30px);
+  }
+  @include mq(tablet) {
+    @include section;
+  }
+}
+
+.reviews__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+  @include mq(mobile) {
+    margin-bottom: 16px;
+  }
+  @include mq(tablet) {
+    padding: 0 42px;
+  }
+  @include mq(desktop) {
+    padding: 0 100px;
+  }
+}
+
+.reviews__image {
+  margin-bottom: 32px;
+  width: 85px;
+  border-radius: 50%;
+  @include mq(tablet) {
+    margin-bottom: 20px;
+  }
+  @include mq(desktop) {
+    margin-bottom: 16px;
+  }
+}
+
+.reviews__wrapper {
+  padding: 43px 50px 17px 50px;
+
+  background-color: var(--background-review);
+  margin-bottom: 16px;
+
+  @include mq(tablet) {
+    margin-bottom: 4px;
+    padding: 37px 6px 36px 6px;
+  }
+  @include mq(desktop) {
+    padding: 47px 74px 31px 73px;
+
+    margin-bottom: 16px;
+    box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+}
+
+.reviews__text {
+  z-index: 1;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 8px;
+
+  font-size: 12px;
+  line-height: 2.55;
+  text-align: center;
+  color: #000000;
+
+  @include mq(tablet) {
+    font-size: 14px;
+    line-height: 2.16;
+    padding-left: 45px;
+    padding-right: 49px;
+  }
+  @include mq(desktop) {
+    font-size: 16px;
+    line-height: 1.86;
+    padding-left: 36px;
+    padding-right: 35px;
+  }
+
+  background-image: repeating-linear-gradient(
+    to top,
+    var(--decor-color),
+    transparent 1px,
+    transparent 30px,
+    transparent 31px
+  );
+}
+
+.reviews__text::before {
+  content: '';
+  position: absolute;
+  left: -0;
+  top: -13px;
+  width: 100%;
+  height: 100%;
+  background: url(../images/icons/sign.svg);
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.reviews__dots,
+.reviews__dots::before,
+.reviews__dots::after {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--review-accent);
+}
+
+.reviews__dots {
+  position: relative;
+
+  margin-bottom: 16px;
+  &::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 10px;
+  }
+}
+
+.slick-dots li:hover button:before {
+  color: var(--review-accent);
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: var(--review-common);
+  opacity: 1;
+}
+
+.slick-dots li.slick-active button::before {
+  background: url(../images/icons/home.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 35%;
+  color: transparent;
+}
+
+.reviews__city {
+  font-size: 14px;
+  line-height: 186%;
+  color: var(--text-color);
+
+  @include mq(tablet) {
+    font-size: 16px;
+  }
+  @include mq(desktop) {
+    font-size: 20px;
+  }
 }
