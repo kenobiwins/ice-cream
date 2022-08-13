@@ -1,39 +1,70 @@
+.container--hero{
+  position: fixed;
+    top: 0;
+    left: 0;
+
+background-color: var(--background-primary-color);
+min-width: 320px;
+  height: 502px;
+
+
+}
+
 .hero{
   position: absolute;
-  top: 0;
-  width: 320px;
-  height: 502px;
-  background-color:  var(--background-primary-color);
-  background-repeat: no-repeat;
-  // background-image: lay
-  margin-right: auto;
-  margin-left: auto;
+  top: 194px;
+   z-index: 5;
 
-  // overflow: hidden;
 }
 
 .hero__name{
+  font-family: titan one;
+  font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
   color: var(--white-color);
-  z-index: 10;
-}
 
-.hero__name--color{
-  color: var(--title-color);
+&--color {
+  font-size: 48px;
+    line-height: 0.97;
+    color: var(--title-color);
+  }
 }
 
 .circle{
   position: fixed;
 top: 83px;
 left: 36px;
-
+right: -63px;
   width: 346px;
   height: 344px;
   border-radius: 50%;
   background-color: var(--background-secondary-color);
 // display: block;
-margin-right: -63px;
+
   
 }
+.pic{
+  width: auto;
+}
+
+.ice-cream{
+  position: absolute;
+  top: 92px;
+  left: 117px;
+  z-index: 4;
+}
+
+
+
+
+
+
+
+
 
 // background-position: center;
 //   background-repeat: no-repeat;
