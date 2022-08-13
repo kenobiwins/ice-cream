@@ -1,3 +1,48 @@
-section {
-  background-color: palegoldenrod;
+.hero{
+  position: absolute;
+  top: 0;
+  width: 320px;
+  height: 502px;
+  background-color:  var(--background-primary-color);
+  background-repeat: no-repeat;
+  // background-image: lay
+  margin-right: auto;
+  margin-left: auto;
+
+  // overflow: hidden;
 }
+
+.hero__name{
+  color: var(--white-color);
+  z-index: 10;
+}
+
+.hero__name--color{
+  color: var(--title-color);
+}
+
+.circle{
+  position: fixed;
+top: 83px;
+left: 36px;
+
+  width: 346px;
+  height: 344px;
+  border-radius: 50%;
+  background-color: var(--background-secondary-color);
+// display: block;
+margin-right: -63px;
+  
+}
+
+// background-position: center;
+//   background-repeat: no-repeat;
+//   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//     url(../img/banner-480px@1x.jpg);
+//   background-size: cover;
+//   @media screen and (min-device-pixel-ratio: 2),
+//     screen and (min-resolution: 192dpi),
+//     screen and (min-resolution: 2dppx) {
+//     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//       url(../img/banner-480px@2x.jpg);
+//     background-size: cover;
