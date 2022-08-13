@@ -1,8 +1,9 @@
 .modal {
   width: 100%;
   height: 100%;
+  max-width: 450px;
 
-  padding: 15px;
+  padding: 20px 15px 40px 15px;
 
   background-color: var(--background-primary-color);
   background-image: linear-gradient(
@@ -14,6 +15,9 @@
   background-repeat: no-repeat;
   box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
     0px 1px 3px 0px #0000001f;
+  background-position-x: 20px;
+  background-position-y: 40px;
+  background-size: 75%;
 
   border: none;
   border-radius: 4px;
@@ -25,9 +29,15 @@
   transform: translate(-50%, -50%);
 
   @include mq(tablet) {
-    width: 450px;
-    height: 650px;
+    max-width: 520px;
+    height: 700px;
+    padding: 25px 20px 50px 20px;
+
+    background-position-x: 215px;
+    background-position-y: 10px;
+    background-size: 60%;
   }
+
   @include mq(desktop) {
     width: 550px;
     height: 700px;
@@ -38,6 +48,10 @@
 
     @include fonts(26px, 35px, 700, 0.02em);
     color: var(--white-color);
+
+    @include mq(tablet) {
+      @include fonts(40px, 35px, 700, 0.02em);
+    }
   }
 }
 
@@ -48,11 +62,14 @@
   margin: 10px 0 0 20px;
 }
 .checkbox__lable {
+  display: block;
+
   @include fonts(20px, 30px, 500, 0.02em);
   color: var(--white-color);
-}
-.checkbox__lable {
-  display: block;
+
+  @include mq(tablet) {
+    @include fonts(26px, 32px, 500, 0.02em);
+  }
 }
 
 .checkbox + label {
@@ -72,6 +89,10 @@
   background: var(--background-button-hover);
   box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
   transition: 0.2s;
+
+  @include mq(tablet) {
+    left: 242px;
+  }
 }
 .checkbox + label:after {
   content: '';
@@ -84,12 +105,20 @@
   background: var(--reverse-background-button);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   transition: 0.2s;
+
+  @include mq(tablet) {
+    left: 242px;
+  }
 }
 .checkbox:checked + label:before {
   background: var(--icon-background);
 }
 .checkbox:checked + label:after {
   left: 228px;
+
+  @include mq(tablet) {
+    left: 270px;
+  }
 }
 .checkbox:focus + label:before {
   box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2),
@@ -100,6 +129,10 @@
   margin-top: 30px;
   @include fonts(20px, 30px, 500, 0.02em);
   color: var(--white-color);
+
+  @include mq(tablet) {
+    @include fonts(30px, 35px, 700, 0.02em);
+  }
 }
 
 .form__ammount {
@@ -111,9 +144,15 @@
 
   @include fonts(20px, 30px, 500, 0.02em);
   color: var(--white-color);
+
+  @include mq(tablet) {
+    @include fonts(26px, 32px, 500, 0.02em);
+  }
 }
+
 .form__amount-counter {
-  border-radius: 4px;
+  text-align: center;
+  border-radius: 6px;
   background-color: var(--background-button-hover);
   outline: none;
   border: 2px solid var(--reverse-background-button);
@@ -146,6 +185,10 @@
 
   @include fonts(14px, 30px, 400, 0.02em);
   color: var(--white-color);
+
+  @include mq(tablet) {
+    @include fonts(20px, 32px, 400, 0.02em);
+  }
 }
 .form__text-textarea {
   position: absolute;
@@ -154,6 +197,10 @@
 
   @include fonts(14px, 30px, 400, 0.02em);
   color: var(--white-color);
+
+  @include mq(tablet) {
+    @include fonts(20px, 32px, 400, 0.02em);
+  }
 }
 
 .form__input {
@@ -165,6 +212,10 @@
   border-radius: 4px;
   outline: none;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include mq(tablet) {
+    @include fonts(20px, 32px, 400, 0.02em);
+  }
 }
 .textarea {
   height: 120px;
@@ -175,8 +226,8 @@
 .modal-close {
   display: block;
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 10px;
+  right: 10px;
   width: 30px;
   height: 30px;
   fill: var(--reverse-background-button);
@@ -206,4 +257,7 @@
 .button__modal {
   display: block;
   margin: 0 auto;
+  padding: 15px 60px;
+
+  @include fonts(20px, 36px, 700, 0.02em);
 }
