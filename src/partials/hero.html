@@ -1,14 +1,12 @@
-<section>
-    <div class="container container--hero">
-        <div class="hero">
-            <h1 class="hero__name">ice cream </br> made with </br> <span class="hero__name--color">passion</span> </h1>
+<section class="hero">
+    <div class="container hero__container">
+        <div class="hero__title-wrapper">
+            <h1 class="title title__hero"><span class="title__hero--color">ice cream made with </span> <span class="title__hero--size" >passion</span></h1>
             <button class="hero__button button button--red">Products</button>
             <button class="hero__button button">How it’s made?</button>
         </div>
-            <div class="">
-                <!-- <img class="pic" src="./images/hero/mobile/slider-pic1.png " alt="ice cream" /> -->
-                <picture class="ice-cream">
-        
+            <div class="ice-cream">                
+                <picture >        
                     <source srcset="./images/hero/desktop/slider-pic1.webp 1x, ./images/hero/desktop/slider-pic1@2x.webp 2x"
                         media="(min-width:1200px)" type="image/webp" />
                     <source srcset="./images/hero/desktop/slider-pic1.png 1x, ./images/hero/desktop/slider-pic1@2x.png 2x"
@@ -23,11 +21,10 @@
                         type="image/webp" />
                     <source srcset="./images/hero/mobile/slider-pic1.png 1x, ./images/hero/mobile/slider-pic1@2x.png 2x"
                         type="image/png" />
-                    <img class="pic" src="./images/hero/mobile/slider-pic1.png " alt="ice cream" />
-                </picture>
-                <div class="circle"></div>
+                    <img src="./images/hero/mobile/slider-pic1.png " alt="ice cream" />
+                </picture>                
             </div>
-         
+        <div class="hero__circle"></div>
     </div>
     
 </section>

@@ -1,34 +1,35 @@
-.container--hero{
+.hero{
+background-color: var(--background-primary-color);
+}
+.hero__container{
   position: relative;
-    top: 0;
-  //   left: 0;
-  height: 502px;
-  background-color: var(--background-primary-color);
+
+  height: 100vh;
+  
   overflow: hidden;
 }
 
-.hero{
+.hero__title-wrapper{
   position: absolute;
   top: 194px;
    z-index: 4;
 
 }
 
-.hero__name{
-  font-family: titan one;
-  font-style: normal;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 1.15;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-  color: var(--white-color);
+.title__hero{
+  width:218px ;
+font-size: 26px;
+  line-height: 1.15;
+  text-transform: uppercase;
   margin-bottom: 20px;
 
   &--color {
-    font-size: 48px;
-    line-height: 0.97;
-    color: var(--title-color);
+    
+    color: var(--white-color);
+  }
+  &--size{
+font-size: 48px;
+  line-height: 0.97;
   }
 }
 .hero__button{
@@ -37,11 +38,11 @@
     padding: 9px 14px;
 }
 
-.circle{
+.hero__circle{
   position: absolute;
+  
 top: 83px;
 left: 36px;
-right: -63px;
   width: 346px;
   height: 344px;
   border-radius: 50%;
@@ -49,33 +50,11 @@ right: -63px;
 
   
 }
-.pic{
-  width: auto;
-}
+
 
 .ice-cream{
   position: absolute;
   top: 92px;
-  left: 117px;
+  left: 35%;
   z-index: 3;
 }
-
-
-
-
-
-
-
-
-
-// background-position: center;
-//   background-repeat: no-repeat;
-//   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-//     url(../img/banner-480px@1x.jpg);
-//   background-size: cover;
-//   @media screen and (min-device-pixel-ratio: 2),
-//     screen and (min-resolution: 192dpi),
-//     screen and (min-resolution: 2dppx) {
-//     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-//       url(../img/banner-480px@2x.jpg);
-//     background-size: cover;
