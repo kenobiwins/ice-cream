@@ -1,19 +1,16 @@
 .container--hero{
-  position: fixed;
+  position: relative;
     top: 0;
-    left: 0;
-
-background-color: var(--background-primary-color);
-min-width: 320px;
+  //   left: 0;
   height: 502px;
-
-
+  background-color: var(--background-primary-color);
+  overflow: hidden;
 }
 
 .hero{
   position: absolute;
   top: 194px;
-   z-index: 5;
+   z-index: 4;
 
 }
 
@@ -26,16 +23,22 @@ min-width: 320px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
   color: var(--white-color);
+  margin-bottom: 20px;
 
-&--color {
-  font-size: 48px;
+  &--color {
+    font-size: 48px;
     line-height: 0.97;
     color: var(--title-color);
   }
 }
+.hero__button{
+  font-size: 8px;
+    line-height: 1.25;
+    padding: 9px 14px;
+}
 
 .circle{
-  position: fixed;
+  position: absolute;
 top: 83px;
 left: 36px;
 right: -63px;
@@ -43,7 +46,6 @@ right: -63px;
   height: 344px;
   border-radius: 50%;
   background-color: var(--background-secondary-color);
-// display: block;
 
   
 }
@@ -55,7 +57,7 @@ right: -63px;
   position: absolute;
   top: 92px;
   left: 117px;
-  z-index: 4;
+  z-index: 3;
 }
 
 
