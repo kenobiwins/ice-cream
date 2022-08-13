@@ -1,12 +1,17 @@
-section {
-}
+.gallery {
+  max-height: 430px;
+  background-image: linear-gradient(
+    to bottom,
+    var(--background-section-primary) 27%,
+    var(--white-color) 27%
+  );
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
+  @include mq(mobile) {
+    @include section(30px, 30px);
+  }
+  @include mq(tablet) {
+    @include section;
+  }
 }
 
 /* ---- grid ---- */
@@ -14,7 +19,6 @@ body {
 .gallery-grid {
   display: grid;
   grid-auto-flow: column;
-  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 
@@ -44,36 +48,36 @@ body {
 .gallery-grid__item {
   float: left;
 
-  @media screen and (min-width: 1200px) {
+  @include mq(desktop) {
     width: 138px;
     height: 138px;
   }
 
-  @media screen and (max-width: 767px) {
-    width: 44px;
-    height: 44px;
-  }
-
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
     width: 105px;
     height: 105px;
+  }
+
+  @include mq(mobile) {
+    width: 44px;
+    height: 44px;
   }
 }
 
 .gallery-grid__item.big {
-  @media screen and (min-width: 1200px) {
+  @include mq(desktop) {
     width: 283px;
     height: 283px;
   }
 
-  @media screen and (max-width: 767px) {
-    width: 90px;
-    height: 90px;
-  }
-
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
     width: 214px;
     height: 214px;
+  }
+
+  @include mq(mobile) {
+    width: 90px;
+    height: 90px;
   }
 }
 
@@ -83,13 +87,23 @@ body {
 }
 
 .up {
-  padding-bottom: 70px;
+  padding-bottom: 50px;
+
+  @include mq(tablet) {
+    padding-bottom: 37px;
+  }
+
+  @include mq(mobile) {
+    padding-bottom: 16px;
+  }
 }
 
 .gallery__img {
+  max-width: 100%;
+
   border-radius: 20px;
 
-  @media screen and (max-width: 767px) {
+  @include mq(mobile) {
     border-radius: 8px;
   }
 }
