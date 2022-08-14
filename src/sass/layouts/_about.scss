@@ -52,12 +52,11 @@
     }
 }
 
-.about__tablet {
+.about__wrapper {
   @include mq(mobile) {
     background-image: url(../images/about/mobile/milk1.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-position: bottom 120px;
   
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -123,11 +122,22 @@
 }
 
 .about__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 14px;
   line-height: 1.29;
-  align-items: center;
   text-align: center;
 
   width: 176px;
   height: 44px;
+  margin-bottom: 20px;
+  
+    @include mq(tablet) {
+      margin-bottom: 40px;
+    }
+}
+.about-icon {
+  fill: var(--text-button);
+  margin-left: 15px;
 }
