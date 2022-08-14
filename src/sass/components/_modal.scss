@@ -1,4 +1,10 @@
 .modal {
+  position: absolute;
+  overflow: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   width: 100%;
   height: 100%;
   max-width: 450px;
@@ -9,24 +15,18 @@
   background-image: linear-gradient(
       to right,
       rgba(255, 184, 202, 0.9),
-      rgba(255, 184, 202, 0.7)
+      rgba(255, 184, 202, 0.8)
     ),
     url(../images/hero/mobile/slider-pic1.png);
   background-repeat: no-repeat;
-  box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
-    0px 1px 3px 0px #0000001f;
   background-position-x: 20px;
   background-position-y: 40px;
   background-size: 75%;
+  box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
+    0px 1px 3px 0px #0000001f;
 
   border: none;
   border-radius: 4px;
-
-  position: absolute;
-  overflow: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 
   @include mq(tablet) {
     max-width: 520px;
@@ -40,19 +40,27 @@
 
   @include mq(desktop) {
     width: 550px;
-    height: 700px;
   }
-  &__discount {
-    margin-top: 17px;
-    text-align: center;
+}
+.modal__discount {
+  margin-top: 17px;
+  text-align: center;
+  @include fonts(26px, 35px, 700);
+  color: var(--white-color);
 
-    @include fonts(26px, 35px, 700, 0.02em);
-    color: var(--white-color);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #d41443, #c2e297);
+  background-position: 0vh;
+  transition: background-image 550ms linear, background-position 300ms linear;
 
-    @include mq(tablet) {
-      @include fonts(40px, 35px, 700, 0.02em);
-    }
+  @include mq(tablet) {
+    @include fonts(40px, 35px, 700);
   }
+}
+.modal_discount:hover,
+.modal_discount:focus {
+  background-position: 330vh;
 }
 
 .checkbox {
@@ -60,21 +68,24 @@
   z-index: -1;
   opacity: 0;
   margin: 10px 0 0 20px;
-}
-.checkbox__lable {
-  display: block;
 
-  @include fonts(20px, 30px, 500, 0.02em);
-  color: var(--white-color);
+  &__lable {
+    display: block;
 
-  @include mq(tablet) {
-    @include fonts(26px, 32px, 500, 0.02em);
+    @include fonts(20px, 30px, 500);
+    color: var(--white-color);
+
+    @include mq(tablet) {
+      @include fonts(26px, 32px, 500);
+    }
   }
 }
 
 .checkbox + label {
   position: relative;
+  margin-bottom: 10px;
   padding: 0 0 0 40px;
+
   cursor: pointer;
 }
 
@@ -85,6 +96,7 @@
   left: 200px;
   width: 50px;
   height: 26px;
+
   border-radius: 13px;
   background: var(--background-button-hover);
   box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
@@ -125,118 +137,122 @@
     0 0 0 3px rgba(194, 226, 151, 0.7);
 }
 
-.form__options {
-  margin-top: 30px;
-  @include fonts(20px, 30px, 500, 0.02em);
-  color: var(--white-color);
+.form {
+  &__options {
+    margin-top: 30px;
+    @include fonts(20px, 30px, 500);
+    color: var(--white-color);
 
-  @include mq(tablet) {
-    @include fonts(30px, 35px, 700, 0.02em);
+    @include mq(tablet) {
+      @include fonts(30px, 35px, 700);
+    }
+  }
+
+  &__ammount {
+    margin-right: 16px;
+    padding-left: 40px;
+
+    @include fonts(20px, 30px, 500);
+    color: var(--white-color);
+
+    @include mq(tablet) {
+      @include fonts(26px, 32px, 500);
+    }
+  }
+
+  &__amount-counter {
+    width: 40px;
+    height: 26px;
+
+    text-align: center;
+    border-radius: 6px;
+    background-color: var(--background-button-hover);
+    outline: none;
+    border: 2px solid var(--reverse-background-button);
+
+    &:focus {
+      border: 2px solid var(--background-secondary-color);
+    }
+  }
+
+  //  personal data
+
+  &__lable {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  &__lable:first-child {
+    margin-top: 50px;
+  }
+
+  &__options {
+    text-align: center;
+  }
+
+  &__text {
+    position: absolute;
+    bottom: 35px;
+    left: 12px;
+
+    @include fonts(14px, 30px, 400);
+    color: var(--white-color);
+
+    @include mq(tablet) {
+      @include fonts(20px, 32px, 400);
+    }
+  }
+  &__text-textarea {
+    position: absolute;
+    left: 12px;
+    bottom: 115px;
+
+    @include fonts(14px, 30px, 400);
+    color: var(--white-color);
+
+    @include mq(tablet) {
+      @include fonts(20px, 32px, 400);
+    }
+  }
+
+  &__input {
+    width: 100%;
+    margin-top: 4px;
+    padding: 12px;
+    height: 40px;
+    border: 1px solid var(--accent-font-color);
+    border-radius: 4px;
+    outline: none;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include mq(tablet) {
+      @include fonts(20px, 32px, 400);
+    }
   }
 }
 
-.form__ammount {
-  display: flex;
-  padding-left: 40px;
-}
-.form__amount-title {
-  margin-right: 25px;
-
-  @include fonts(20px, 30px, 500, 0.02em);
-  color: var(--white-color);
-
-  @include mq(tablet) {
-    @include fonts(26px, 32px, 500, 0.02em);
-  }
-}
-
-.form__amount-counter {
-  text-align: center;
-  border-radius: 6px;
-  background-color: var(--background-button-hover);
-  outline: none;
-  border: 2px solid var(--reverse-background-button);
-
-  &:focus {
-    border: 2px solid var(--background-secondary-color);
-  }
-}
-
-//  personal data
-
-.form__lable {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 30px;
-}
-.form__lable:first-child {
-  margin-top: 50px;
-}
-
-.form__options {
-  text-align: center;
-}
-
-.form__text {
-  position: absolute;
-  bottom: 35px;
-  left: 12px;
-
-  @include fonts(14px, 30px, 400, 0.02em);
-  color: var(--white-color);
-
-  @include mq(tablet) {
-    @include fonts(20px, 32px, 400, 0.02em);
-  }
-}
-.form__text-textarea {
-  position: absolute;
-  left: 12px;
-  bottom: 115px;
-
-  @include fonts(14px, 30px, 400, 0.02em);
-  color: var(--white-color);
-
-  @include mq(tablet) {
-    @include fonts(20px, 32px, 400, 0.02em);
-  }
-}
-
-.form__input {
-  width: 100%;
-  margin-top: 4px;
-  padding: 12px;
-  height: 40px;
-  border: 1px solid var(--accent-font-color);
-  border-radius: 4px;
-  outline: none;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  @include mq(tablet) {
-    @include fonts(20px, 32px, 400, 0.02em);
-  }
-}
 .textarea {
   height: 120px;
   padding: 10px;
 }
+
 //  buttons
 
 .modal-close {
   display: block;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 12px;
+  right: 12px;
   width: 30px;
   height: 30px;
 
-  border: 1px solid var(--reverse-background-button);
+  border: none;
   border-radius: 50%;
-  box-shadow: 0px 0px 1px 0px var(--reverse-background-button);
+  box-shadow: 0px 0px 1px 0px var(--white-font-color);
 
   background-color: var(--background-primary-color);
-  transition: border-color var(--transition);
+  transition: border-color var(--transition), transform;
   cursor: pointer;
 
   &:hover,
@@ -246,6 +262,8 @@
     box-shadow: 0px 0px 3px 0px var(--background-button-hover),
       0px 0px 3px 0px var(--background-button-hover),
       0px 1px 1px 0px var(--background-button-hover);
+    transform: scale(1.1);
+    transition-duration: 1000ms;
   }
   &:hover &__icon,
   &:focus &__icon {
@@ -253,9 +271,9 @@
   }
 
   &__icon {
-    width: 11px;
-    height: 11px;
-    fill: var(--reverse-background-button);
+    width: 14px;
+    height: 14px;
+    fill: var(--white-font-color);
     transition: fill var(--transition);
   }
 }
@@ -263,7 +281,8 @@
 .button__modal {
   display: block;
   margin: 0 auto;
-  padding: 15px 60px;
 
-  @include fonts(20px, 36px, 700, 0.02em);
+  padding: 15px 50px;
+
+  @include fonts(18px, 34px, 700);
 }

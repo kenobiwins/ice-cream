@@ -50,6 +50,5 @@
 <symbol id="icon-arrow" viewBox="0 0 6 10">
 <path d="M0.999969 1L4.61032 5L0.999969 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol>
-<symbol id="modal-close" viewBox="0 0 32 32"><path d="M32 3.223l-3.223-3.223-12.777 12.777-12.777-12.777-3.223 3.223 12.777 12.777-12.777 12.777 3.223 3.223 12.777-12.777 12.777 12.777 3.223-3.223-12.777-12.777 12.777-12.777z"/></symbol>
 </defs>
 </svg>

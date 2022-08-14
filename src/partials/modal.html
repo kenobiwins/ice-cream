@@ -3,9 +3,9 @@
     <button class="modal-close data-modal-close" type="button">
       <svg class="modal-close__icon">
         <use
-          href="./images/sprite.svg#modal-close"
-          width="11px"
-          height="11px"
+          href="./images/sprite.svg#icon-close"
+          width="14px"
+          height="14px"
         ></use>
       </svg>
     </button>
@@ -15,7 +15,7 @@
       <div class="form__group" role="group" aria-labelledby="order-details">
         <div class="form__order">
           <input
-            class="checkbox"
+            class="checkbox visually-hidden"
             type="checkbox"
             name="product"
             value="ice cream"
@@ -23,21 +23,20 @@
           />
           <label class="checkbox__lable" for="ice-crem">ice cream</label>
 
-          <label class="form__ammount">
-            <p class="form__amount-title">order quantity</p>
-            <input
-              class="form__amount-counter"
-              type="number"
-              name="amount"
-              required
-              min="0"
-              max="10"
-            />
-          </label>
+          <label class="form__ammount"> order quantity</label>
+
+          <input
+            class="form__amount-counter"
+            type="number"
+            name="amount"
+            required
+            min="0"
+            max="10"
+          />
         </div>
         <div class="form__order">
           <input
-            class="checkbox"
+            class="checkbox visually-hidden"
             type="checkbox"
             name="product"
             value="Ice coffee"
@@ -45,8 +44,9 @@
           />
           <label class="checkbox__lable" for="ice-coffee">ice coffee</label>
 
-          <label class="form__ammount">
-            <p class="form__amount-title">order quantity</p>
+          <label class="form__ammount"
+            >order quantity
+            <!-- <p class="form__amount-title">order quantity</p> -->
             <input
               class="form__amount-counter"
               type="number"
@@ -59,7 +59,7 @@
         </div>
         <div class="form__order">
           <input
-            class="checkbox"
+            class="checkbox visually-hidden"
             type="checkbox"
             name="product"
             value="milkshake"
@@ -67,8 +67,9 @@
           />
 
           <label class="checkbox__lable" for="milkshake">milkshake</label>
-          <label class="form__ammount">
-            <p class="form__amount-title">order quantity</p>
+          <label class="form__ammount"
+            >order quantity
+            <!-- <p class="form__amount-title">order quantity</p> -->
             <input
               class="form__amount-counter"
               type="number"
@@ -80,6 +81,7 @@
           </label>
         </div>
       </div>
+
       <div class="form__group" role="group" aria-labelledby="contact-details">
         <label class="form__lable">
           <span class="form__text">Your name</span>
