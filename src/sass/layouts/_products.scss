@@ -23,68 +23,65 @@
 
 .product {
   position: relative;
-  padding-top: 160px;
+  padding-top: 140px;
   padding-bottom: 40px;
+  margin-top: 140px;
   background-color: var(--background-secondary-color);
   border-radius: 24px;
 
-  &--beige {
+  &-cofee {
     background-color: #F0D1A5;
   }
 
-  &--green {
+  &-milkshakes {
     background-color: #C2E297;
   }
 }
 
-.pic {
-  position: relative;
-  height: 140px;
-}
-
-.pic-cream::before {
+.product-cream::before {
 content: '';
 position: absolute;
 top: 0;
-left: 0;
+left: 50%;
+z-index: 2;
+transform: translate(-50%, -50%);
+
 width: 280px;
 height: 280px;
-z-index: 2;
+
 background-image: url(../images/products/mobile/product-pic1.png);
 }
 
-.pic-coffee::before {
+.product-coffee::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  
   width: 280px;
   height: 280px;
-  z-index: 2;
   background-image: url(../images/products/mobile/product-pic2.png)
 }
 
-.pic-milkshakes::before {
+.product-milkshakes::before {
   content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 280px;
-  height: 280px;
-  z-index: 2;
+  content: '';
+position: absolute;
+top: 0;
+left: 50%;
+z-index: 2;
+transform: translate(-50%, -50%);
+
+width: 280px;
+height: 280px;
+
   background-image: url(../images/products/mobile/product-pic3.png)
 }
 
-.product::before {
-position: absolute;
-left: 0;
-top: 0;
-width: 6px;
-height: 6px;
-border-radius: 50%;
-}
-
 .product__name {
+  margin-top: 20px;
   margin-bottom: 32px;
   font-family: 'Titan One', cursive;
   font-weight: 400;
@@ -129,7 +126,6 @@ left: 0;
 position: absolute;
 right: 0;
 }
-
 
 .product__discr {
   padding-left: 41px;
