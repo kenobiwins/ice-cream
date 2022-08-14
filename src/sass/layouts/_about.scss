@@ -17,6 +17,8 @@
   }
 }
 
+
+
 .about__label {
   text-align: center;
   margin-bottom: 15px;
@@ -34,17 +36,6 @@
 }
 
 .about__wrapper {
-  @include mq(mobile) {
-    background-image: url(../images/about/mobile/milk1.png);
-    background-repeat: no-repeat;
-    background-position: center;
-
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url(../images/about/mobile/milk1@2x.png);
-    }
-  }
   @include mq(tablet) {
     display: flex;
     align-items: center;
@@ -60,7 +51,7 @@
   @include mq(mobile) {
     background-image: url(../images/about/mobile/milk1.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position-y: 30%;
     background-size: contain;
 
     @media (min-device-pixel-ratio: 2),
