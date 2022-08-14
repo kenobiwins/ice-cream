@@ -64,9 +64,9 @@ font-size: 26px;
     display: none;
   }
   .hero__cafes{
-    display: none;
+    // display: none;
   }
-  .food-trucks{
+  .hero__food-trucks{
     display: none;
   }
   
@@ -127,13 +127,43 @@ font-size: 26px;
 
     }
   
-  // .hero__cafes {
-  //   display: none;
-  // }
+  .hero__cafes {
+    position: absolute;
+    top: 92px;
+    right: 32px;
+  }
   
-  // .food-trucks {
-  //   display: none;
-  // }
+  .hero__food-trucks {
+    position: absolute;
+    top: 152px;
+    right: 32px;
+  }
+  .hero__small-circle{
+    position: absolute;
+    top: 0;right: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    // z-index: 4;
+      }
+  .hero__number-cafes-trucks{
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.14;
+    color: red;
+    //  z-index: 3;
+  }
+  .hero__title-cafes-trucks{
+// font-family: 'DM Sans';
+  // font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.25;
+  text-align: right;
+      color: var(--white-color);
+  }
 
   .hero__circle {
       position: absolute;
