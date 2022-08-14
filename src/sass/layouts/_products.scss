@@ -13,6 +13,8 @@
 
   @include mq(tablet) {
     margin-bottom: 18px;
+    font-size: 26px;
+    line-height: 1.15;
   }
 }
 
