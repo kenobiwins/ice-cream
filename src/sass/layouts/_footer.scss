@@ -67,7 +67,7 @@
   background-color: var(--icon-background);
   cursor: pointer;
 
-  transition: var(--transition);
+  transition: transform var(--transition);
 
   &:hover,
   &:focus {
