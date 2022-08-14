@@ -1,5 +1,7 @@
 .products {
   background-color: var(--background-white);
+
+  @include section();
 }
 
 .section__label {
