@@ -42,7 +42,7 @@
 @mixin fonts($fs, $lh, $fw: false, $ls: false) {
   font-size: $fs;
 
-  line-height: decimal-round($lh / $fs);
+  line-height: calc($lh / $fs);
 
   //   формул деления, например: 20/14=1,43 (значение line height)
 
