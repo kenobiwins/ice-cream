@@ -1,12 +1,73 @@
-<section>
-  4
-  <p class="animate__animated animate__bounce">5555</p>
-  <div class="multiple-items">
-    <div><h3>1</h3></div>
-    <div><h3>2</h3></div>
-    <div><h3>3</h3></div>
-    <div><h3>4</h3></div>
-    <div><h3>5</h3></div>
-    <div><h3>6</h3></div>
+<section class="about">
+  <!--                         ABOUT               -->
+  <div class="about__container container">
+    <p class="about__label label-title">tradition and love</p>
+    <h2 class="about__title title">how it’s made?</h2>
+    <div class="about__tablet">
+      <picture>
+        <source
+          srcset="
+            ./images/about/desktop/cow1.webp    1x,
+            ./images/about/desktop/cow1@2x.webp 2x,
+            ./images/about/desktop/cow1.png     1x,
+            ./images/about/desktop/cow1@2x.png  2x
+          "
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="
+            ./images/about/tablet/cow1.webp    1x,
+            ./images/about/tablet/cow1@2x.webp 2x,
+            ./images/about/tablet/cow1.png     1x,
+            ./images/about/tablet/cow1@2x.png  2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            ./images/about/mobile/cow1.webp    1x,
+            ./images/about/mobile/cow1@2x.webp 2x,
+            ./images/about/mobile/cow1.png     1x,
+            ./images/about/mobile/cow1@2x.png  2x
+          "
+          media="(min-width: 320px)"
+        />
+        <img
+          src="./images/about/desktop/cow1.png"
+          alt="a cow and a jug of milk"
+          width="501px"
+          height="501px"
+          loading="lazy"
+        />
+      </picture>
+      <div class="about__info">
+        <ul class="about__list">
+          <li class="about__item">
+            <p class="about__top-text">
+              Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel
+              justo cursus, faucibus lorem eget, egestas eros. Maecenas eleifend
+              erat at justo fringilla.
+            </p>
+          </li>
+          <li class="about__item">
+            <p class="about__text text">
+              Curabitur lacinia enim at ex blandit, vel pellentesque odio
+              elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum
+              euismod nisl suscipit ligula volutpat, a feugiat urna maximus.
+              Cras massa nibh, tincidunt.
+            </p>
+
+            <p class="about__text-bottom text">
+              Aliquam erat volutpat. Aenean accumsan.
+            </p>
+          </li>
+        </ul>
+        <button class="about__btn button" type="button" data-modal-open>
+          Read more<svg class="send-icon" width="6" height="9">
+            <use></use>
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 </section>

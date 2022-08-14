@@ -1,8 +1,12 @@
 .contacts {
-  background-image: linear-gradient(to bottom,var(--background-section-white)0%,var(--background-section-white)22%,var(--background-section-primary)22%,var(--background-section-primary)100%);
-  padding-top: 30px;
-  padding-bottom: 20px;
-  font-family: 'DM Sans';
+  background-image: linear-gradient(
+    to bottom,
+    var(--background-section-white) 0%,
+    var(--background-section-white) 18%,
+    var(--background-section-primary) 18%,
+    var(--background-section-primary) 100%
+  );
+  @include section(30px, 20px);
 }
 
 .contacts__list {
@@ -10,6 +14,7 @@
   margin-bottom: 32px;
 
   @include mq(tablet) {
+    gap: 32px;
     margin-bottom: 60px;
   }
 }
@@ -24,15 +29,15 @@
 }
 
 .card-set__item {
-  @include mq(tablet){
-    --items:3;
-}
+  @include mq(tablet) {
+    --items: 3;
+  }
 }
 
 .contacts__wrap {
   padding-bottom: 24px;
 
-  border-bottom: 1px solid var(--decor-color);  
+  border-bottom: 1px solid var(--decor-color);
 }
 
 .contacts__category {
@@ -49,40 +54,40 @@
 }
 
 .contacts__category--brown {
-  background-color: #F0D1A5;
+  background-color: #f0d1a5;
 }
 
 .contacts__category--green {
-  background-color:#C2E297;
+  background-color: #c2e297;
 }
 
 .contacts__city {
   margin-bottom: 8px;
 
-  @include fonts(12px, 22px, 500, 0.04em);
-  
+  @include fonts(12px, 22px);
+
   color: var(--text-color);
 
-  @include mq(tablet){
-    @include fonts(14px, 26px, 500, 0.04em);
+  @include mq(tablet) {
+    @include fonts(14px, 26px);
   }
 
-  @include mq(desktop){
-    @include fonts(16px, 30px, 500, 0.04em);
+  @include mq(desktop) {
+    @include fonts(16px, 30px);
   }
 }
 
 .contacts__text {
-  @include fonts(12px, 18px, 500, 0.04em);
-   
+  @include fonts(12px, 18px);
+
   color: var(--text-secondary-color);
 
-  @include mq(tablet){
-    @include fonts(14px, 23px, 500, 0.04em);
+  @include mq(tablet) {
+    @include fonts(14px, 23px);
   }
 
-  @include mq(desktop){
-    @include fonts(16px, 30px, 500, 0.04em);
+  @include mq(desktop) {
+    @include fonts(16px, 30px);
   }
 }
 
@@ -93,34 +98,34 @@
 
   padding: 24px 0;
 
-  border-bottom: 1px solid var(--decor-color);  
+  border-bottom: 1px solid var(--decor-color);
 }
 
 .worktime__days {
-  @include fonts(12px, 22px, 500, 0.04em);
-  
+  @include fonts(12px, 22px);
+
   color: var(--text-color);
 
-  @include mq(tablet){
-    @include fonts(14px, 26px, 500, 0.04em);
+  @include mq(tablet) {
+    @include fonts(14px, 26px);
   }
 
-  @include mq(desktop){
-    @include fonts(16px, 30px, 500, 0.04em);
+  @include mq(desktop) {
+    @include fonts(16px, 30px);
   }
 }
 
 .worktime__time {
-  @include fonts(12px, 22px, 500, 0.04em);
+  @include fonts(12px, 22px);
 
-  color:var(--label-color);
+  color: var(--label-color);
 
-  @include mq(tablet){
-    @include fonts(14px, 26px, 500, 0.04em);
+  @include mq(tablet) {
+    @include fonts(14px, 26px);
   }
 
-  @include mq(desktop){
-    @include fonts(16px, 30px, 500, 0.04em);
+  @include mq(desktop) {
+    @include fonts(16px, 30px);
   }
 }
 
@@ -129,31 +134,28 @@
   flex-direction: column;
   padding-top: 24px;
 
-  @include fonts(12px, 18px, 500, 0.04em);
-     
-  color: var(--text-secondary-color);  
+  @include fonts(12px, 18px);
 
-  cursor: pointer;
+  color: var(--text-secondary-color);
 
-  @include mq(tablet){
-    @include fonts(14px, 26px, 500, 0.04em);
+  @include mq(tablet) {
+    @include fonts(14px, 26px);
   }
 
-  @include mq(desktop){
-    @include fonts(16px, 30px, 500, 0.04em);
+  @include mq(desktop) {
+    @include fonts(16px, 30px);
   }
 }
-
 .contacts-option__list {
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: center;
-  
-  @include mq(tablet){
+
+  @include mq(tablet) {
     flex-direction: row;
     justify-content: center;
-    gap:15px;
+    gap: 15px;
   }
 }
 
@@ -163,10 +165,10 @@
   justify-content: center;
 
   min-width: 161px;
-  min-height: 44px; 
+  min-height: 44px;
   padding: 10px 15px;
- 
-  @include mq(tablet){
+
+  @include mq(tablet) {
     min-width: 171px;
   }
 }
@@ -176,14 +178,14 @@
 }
 
 .backdrop {
-  padding: 50px 10px ;
+  padding: 50px 10px;
 }
 
 .backdrop.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-  }
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
 
 .contacts-modal {
   padding: 60px 40px;
@@ -210,7 +212,7 @@
   align-items: center;
   justify-content: center;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  background-color:transparent;
+  background-color: transparent;
   background-size: contain;
   border: 1px solid var(--text-button);
   border-radius: 50%;
@@ -231,7 +233,6 @@
   flex-direction: column;
   gap: 15px;
 }
- 
 
 .contacts-modal__title{
   margin-bottom: 20px;
@@ -274,7 +275,6 @@
 
   min-width: 161px;
   min-height: 44px; 
- 
-
-
 }
+
+
