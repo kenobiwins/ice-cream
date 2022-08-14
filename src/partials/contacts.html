@@ -70,8 +70,8 @@
             <li class="contacts-option__item">
                 <form action="https://www.google.com/maps/place/Ice+Cream+House/@38.6355062,-92.8332052,4z/data=!4m10!1m3!11m2!2shgSEWeWYEwYF0b3fXuFNHIs9glfLgg!3e1!3m5!1s0x89c25b2a4fd39a27:0x598d4925e5bb1cf8!8m2!3d40.6931342!4d-73.9544678!15sCgEqWgMiASqSAQ5pY2VfY3JlYW1fc2hvcA">
                 <button class="button button--red contacts-option__button" type="submit">Our Locations
-                    <svg class="contacts-option__icon" width="8" height="16">
-                        <use href="./images/sprite.svg#icon-arrow"></use>
+                    <svg class="contacts-option__icon" width="8" height="30">
+                        <use href="./images/sprite.svg#icon-arrow1"></use>
                     </svg>
                 </button>
                 </form>
@@ -88,42 +88,100 @@
     </div>
 
     <!-- Pop-up Franchise -->
-
     <div class="backdrop is-hidden" data-modal-fran>
          <div class="modal contacts-modal">
-            <h2 class="contacts-modal__title">Bussiness aplication </h2>
+            <h2 class="contacts-modal__title">Business application </h2>
             <button class="contacts-modal__button--close" data-btn-close type="button">
               <svg class="contacts-modal__close-icon" width="18" height="18">
                 <use href="./images/sprite.svg#icon-close"></use>
               </svg> 
-            </button>      
+            </button> 
+
             <form class="contacts-form" action="#">
                 <div class="contacts-form__field">
-                  <label for="username" class="contacts-form__label">Ім'я <span>*</span></label>
-                  <input class="contacts-form__input" type="text" name="name" id="username">
+                  <label for="username" class="contacts-form__label">Company Name <span class="star">*</span></label>
+                  <input class="contacts-form__input" type="text" name="name" id="username">                
                 </div>
       
                 <div class="contacts-form__field">
-                  <label for="usertel" class="contacts-form__label">Телефон <span>*</span> </label>
-                  <input class="contacts-form__input" type="tel" name="tel" id="usertel" required="">      
-                  
+                  <label for="usertel" class="contacts-form__label">Phone Number <span class="star">*</span> </label>
+                  <input class="contacts-form__input" type="tel" name="tel" id="usertel" required="" placeholder="(***)*** - ****">      
                 </div>
       
-                <div class="popup-form__field">
-                  <label for="usermail" class="popup-form__label">Пошта <span>*</span></label>
-                 
-                    <input class="popup-form__input" type="email" name="mail" id="usermail">
-                  
+                <div class="contacts-form__field">
+                  <label for="usermail" class="contacts-form__label">Email <span class="star">*</span></label>
+                  <input class="contacts-form__input" type="email" name="mail" id="usermail" placeholder="example@example.com">                
                 </div>
-      
-                <label class="popup-form__feedback">
-                  <span class="popup-form__label">Коментар</span>
-                  <textarea class="popup-form__textarea" name="comment" placeholder="Введіть текст"></textarea>
-                </label>
-      
-               
-      
-                <button class="button button--send" type="submit">Відправити</button>
+
+                <div class="contacts-form__field">
+                  <label for="city" class="contacts-form__label">City <span class="star">*</span></label>
+                  <input class="contacts-form__input" type="text" id="city">
+                </div>
+
+                <div class="contacts-form__field">
+                  <label for="state" class="contacts-form__label">State<span class="star">*</span></label>
+                  <select id="state" name="state" class="contacts-form__input">
+                    <option value="" disabled="" selected="" class="contacts-form__state">Please Select...</option>
+                    <option value="Alabama" class="contacts-form__state">Alabama</option>
+                    <option value="Alaska" class="contacts-form__state">Alaska</option>
+                    <option value="Arizona" class="contacts-form__state">Arizona</option>
+                    <option value="Arkansas" class="contacts-form__state">Arkansas</option>
+                    <option value="California" class="contacts-form__state">California</option>
+                    <option value="Colorado" class="contacts-form__state">Colorado</option>
+                    <option value="Connecticut" class="contacts-form__state">Connecticut</option>
+                    <option value="Delaware" class="contacts-form__state">Delaware</option>
+                    <option value="District of Columbia" class="contacts-form__state">District of Columbia</option>
+                    <option value="Florida" class="contacts-form__state">Florida</option>
+                    <option value="Georgia" class="contacts-form__state">Georgia</option>
+                    <option value="Hawaii" class="contacts-form__state">Hawaii</option>
+                    <option value="Idaho" class="contacts-form__state">Idaho</option>
+                    <option value="Illinois" class="contacts-form__state">Illinois</option>
+                    <option value="Indiana" class="contacts-form__state">Indiana</option>
+                    <option value="Iowa" class="contacts-form__state">Iowa</option>
+                    <option value="Kansas" class="contacts-form__state">Kansas</option>
+                    <option value="Kentucky" class="contacts-form__state">Kentucky</option>
+                    <option value="Louisiana" class="contacts-form__state">Louisiana</option>
+                    <option value="Maine" class="contacts-form__state">Maine</option>
+                    <option value="Maryland" class="contacts-form__state">Maryland</option>
+                    <option value="Massachusetts" class="contacts-form__state">Massachusetts</option>
+                    <option value="Michigan" class="contacts-form__state">Michigan</option>
+                    <option value="Minnesota" class="contacts-form__state">Minnesota</option>
+                    <option value="Mississippi" class="contacts-form__state">Mississippi</option>
+                    <option value="Missouri" class="contacts-form__state">Missouri</option>
+                    <option value="Montana" class="contacts-form__state">Montana</option>
+                    <option value="Nebraska" class="contacts-form__state">Nebraska</option>
+                    <option value="Nevada" class="contacts-form__state">Nevada</option>
+                    <option value="New Hampshire" class="contacts-form__state">New Hampshire</option>
+                    <option value="New Jersey" class="contacts-form__state">New Jersey</option>
+                    <option value="New Mexico" class="contacts-form__state">New Mexico</option>
+                    <option value="New York" class="contacts-form__state">New York</option>
+                    <option value="North Carolina" class="contacts-form__state">North Carolina</option>
+                    <option value="North Dakota" class="contacts-form__state">North Dakota</option>
+                    <option value="Ohio" class="contacts-form__state">Ohio</option>
+                    <option value="Oklahoma" class="contacts-form__state">Oklahoma</option>
+                    <option value="Oregon" class="contacts-form__state">Oregon</option>
+                    <option value="Pennsylvania" class="contacts-form__state">Pennsylvania</option>
+                    <option value="Rhode Island" class="contacts-form__state">Rhode Island</option>
+                    <option value="South Carolina" class="contacts-form__state">South Carolina</option>
+                    <option value="South Dakota" class="contacts-form__state">South Dakota</option>
+                    <option value="Tennessee" class="contacts-form__state">Tennessee</option>
+                    <option value="Texas" class="contacts-form__state">Texas</option>
+                    <option value="Utah" class="contacts-form__state">Utah</option>
+                    <option value="Vermont" class="contacts-form__state">Vermont</option>
+                    <option value="Virginia" class="contacts-form__state">Virginia</option>
+                    <option value="Washington" class="contacts-form__state">Washington</option>
+                    <option value="West Virginia" class="contacts-form__state">West Virginia</option>
+                    <option value="Wisconsin" class="contacts-form__state">Wisconsin</option>
+                    <option value="Wyoming" class="contacts-form__state">Wyoming</option>
+                  </select>
+                </div>
+
+                <div class="contacts-form__field">
+                    <label for="success" class="contacts-form__label">Did you have run in franchise concept? <span class="star">*</span></label>
+                    <input class="contacts-form__radio" type="radio" id="success" name="work" value="yes">Yes
+                    <input class="contacts-form__radio" type="radio" id="success" name="work" value="no">No
+                </div>     
+                <button class="button button--send" type="submit">Submit</button>
               </form>
 
                   
