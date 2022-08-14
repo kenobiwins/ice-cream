@@ -115,10 +115,6 @@
 
 .about__text-bottom {
   margin-top: 20px;
-  margin-bottom: 20px;
-  @include mq(tablet) {
-  margin-bottom: 40px;
-  }
 }
 
 .about__btn {
@@ -131,10 +127,15 @@
 
   width: 176px;
   height: 44px;
+  margin-top: 20px;
   margin-bottom: 20px;
   
     @include mq(tablet) {
-      margin-bottom: 40px;
+      margin-top: 40px;
+      margin-bottom: 30px;
+    }
+    @include mq(desktop) {
+      margin-bottom: 60px;
     }
 }
 .about-icon {

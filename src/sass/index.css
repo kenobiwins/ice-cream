@@ -499,12 +499,6 @@ section {
 
 .about__text-bottom {
   margin-top: 20px;
-  margin-bottom: 20px;
-}
-@media screen and (min-width: 768px) {
-  .about__text-bottom {
-    margin-bottom: 40px;
-  }
 }
 
 .about__btn {
@@ -516,11 +510,18 @@ section {
   text-align: center;
   width: 176px;
   height: 44px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
   .about__btn {
-    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__btn {
+    margin-bottom: 60px;
   }
 }
 
