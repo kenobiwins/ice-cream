@@ -78,7 +78,7 @@
 
     width: 224px;
     height: 224px;
-  
+
     background-image: url(../images/products/tablet/product-pic1.png);
     background-size: contain;
     @media (min-device-ratio: 2),
@@ -109,11 +109,11 @@
   }
 
   @include mq(tablet) {
-    transform: translate(-50%, -61%);
+    transform: translate(-50%, -60%);
 
     width: 224px;
     height: 224px;
-  
+
     background-image: url(../images/products/tablet/product-pic2.png);
     background-size: contain;
     @media (min-device-ratio: 2),
@@ -150,7 +150,7 @@
 
     width: 224px;
     height: 224px;
-  
+
     background-image: url(../images/products/tablet/product-pic3.png);
     background-size: contain;
     @media (min-device-ratio: 2),
@@ -207,7 +207,6 @@
   color: var(--white-color);
 
   @include fonts(14px, 21px, 700, 0.04em);
-
 }
 
 .arrow-right {
