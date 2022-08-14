@@ -72,7 +72,8 @@
   &:hover,
   &:focus {
     background-color: var(--icon-background-accent);
-    transform: scale(1.15);
+    animation: rubberBand;
+    animation-duration: 1s;
   }
 }
 
@@ -81,8 +82,16 @@
 }
 
 .footer__contacts-accent {
+  display: inline-block;
+
   color: var(--accent-font-color);
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    animation: flip;
+    animation-duration: 1s;
+  }
 }
 
 .footer__copyright {
