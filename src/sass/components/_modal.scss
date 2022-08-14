@@ -11,11 +11,11 @@
 
   padding: 20px 15px 40px 15px;
 
-  background-color: var(--background-primary-color);
+  background-color: var(--background-mobile-menu);
   background-image: linear-gradient(
       to right,
-      rgba(255, 184, 202, 0.9),
-      rgba(255, 184, 202, 0.8)
+      rgba(225, 121, 146, 0.9),
+      rgba(225, 121, 146, 0.8)
     ),
     url(../images/hero/mobile/slider-pic1.png);
   background-repeat: no-repeat;
@@ -33,13 +33,28 @@
     height: 700px;
     padding: 25px 20px 50px 20px;
 
+    background-image: linear-gradient(
+        to right,
+        rgba(225, 121, 146, 0.7),
+        rgba(225, 121, 146, 0.6)
+      ),
+      url(../images/hero/mobile/slider-pic1.png);
     background-position-x: 215px;
     background-position-y: 10px;
     background-size: 60%;
   }
 
   @include mq(desktop) {
-    width: 550px;
+    background-position-x: 297px;
+    background-position-y: 8px;
+    max-width: 650px;
+    height: 750px;
+    background-image: linear-gradient(
+        to right,
+        rgba(225, 121, 146, 0.6),
+        rgba(225, 121, 146, 0.5)
+      ),
+      url(../images/hero/mobile/slider-pic1.png);
   }
 }
 .modal__discount {
@@ -62,15 +77,15 @@
 }
 @keyframes changeBgColor {
   0% {
-    background-color: #e17992;
+    background-color: var(--background-mobile-menu);
   }
 
   50% {
-    background-color: #907e82;
+    background-color: var(--white-font-color);
   }
 
   100% {
-    background-color: #d41443;
+    background-color: var(--accent-font-color);
   }
 }
 
@@ -204,9 +219,6 @@
     display: flex;
     flex-direction: column;
   }
-  // &__lable:first-child {
-  //   margin-top: 50px;
-  // }
 
   &__options {
     text-align: center;
@@ -251,6 +263,13 @@
       @include fonts(20px, 32px, 400);
     }
   }
+  &__input:focus,
+  &__input:active {
+    border: none;
+    outline: 1px solid var(--background-mobile-menu);
+    box-shadow: 1px 4px 4px 1px rgba(225, 121, 146, 0.3),
+      1px 4px 4px 1px rgba(225, 121, 146, 0.3);
+  }
 }
 
 .textarea {
@@ -272,7 +291,7 @@
   border-radius: 50%;
   box-shadow: 0px 0px 1px 0px var(--white-font-color);
 
-  background-color: var(--background-primary-color);
+  background-color: var(--background-mobile-menu);
   transition: border-color var(--transition), transform;
   cursor: pointer;
 
