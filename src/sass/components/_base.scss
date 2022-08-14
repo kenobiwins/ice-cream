@@ -52,6 +52,7 @@ body {
 .title {
   font-family: 'Titan One', cursive;
   color: var(--title-color);
+  text-transform: uppercase;
   @include mq(mobile) {
     @include fonts(34px, 39px, 400, 0.04em);
   }
@@ -66,6 +67,7 @@ body {
 .label-title {
   font-family: 'Titan One', cursive;
   color: var(--label-color);
+  text-transform: uppercase;
   @include mq(mobile) {
     @include fonts(18px, 21px, 400);
   }
