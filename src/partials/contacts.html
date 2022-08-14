@@ -1,1 +1,133 @@
-<section>8</section>
+<section class="section contacts" id="contacts">
+    <div class="container">
+        <h2 class="contacts__title visually-hidden">Contacts</h2>
+        <ul class="contacts__list card-set">
+            <li class="contacts__item card-set__item">
+                <div class="contacts__wrap"> 
+                    <p class="contacts__category contacts__category--brown">Cafe</p>
+                    <h3 class="contacts__city">Chicago</h3>
+                    <p class="contacts__text">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+                </div>
+                <ul class="worktime__list">
+                    <li class="worktime__item">
+                        <p class="worktime__days">Monday - Friday</p>
+                        <time class="worktime__time">06:00 AM - 10:00 PM</time>
+                    </li>
+                    <li class="worktime__item">
+                        <p class="worktime__days">Saturday - Sunday</p>
+                        <time class="worktime__time" >08:00 AM - 16:00 PM</time>
+                    </li>
+                </ul>
+                <address class="contacts__address">
+                    <a class="link" href="tel:+610383766284">+61(0) 383 766 284</a>
+                    <a class="link" href="mailto:noreply@envato.com">noreply@envato.com</a>
+                </address>                           
+            </li>
+            <li class="contacts__item card-set__item">
+                <div class="contacts__wrap">
+                    <p class="contacts__category contacts__category--green">Foodtrack</p>
+                    <h3 class="contacts__city">Los Angeles</h3>
+                    <p class="contacts__text">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+                </div>
+                <ul class="worktime__list">
+                    <li class="worktime__item">
+                        <p class="worktime__days">Monday - Friday</p>
+                        <time class="worktime__time">06:00 AM - 10:00 PM</time>
+                    </li>
+                    <li class="worktime__item">
+                        <p class="worktime__days">Saturday - Sunday</p>
+                        <time class="worktime__time" >08:00 AM - 16:00 PM</time>
+                    </li>
+                </ul>
+                <address class="contacts__address">
+                    <a class="link" href="tel:+610383766284">+61(0) 383 766 284</a>
+                    <a class="link" href="mailto:noreply@envato.com">noreply@envato.com</a>
+                </address>                
+            </li>
+            <li class="contacts__item card-set__item">
+                <div class="contacts__wrap">
+                    <p class="contacts__category contacts__category--brown">Cafe</p>
+                    <h3 class="contacts__city">New York</h3>
+                    <p class="contacts__text">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+                </div>
+                <ul class="worktime__list">
+                    <li class="worktime__item">
+                        <p class="worktime__days">Monday - Friday</p>
+                        <time class="worktime__time">06:00 AM - 10:00 PM</time>
+                    </li>
+                    <li class="worktime__item">
+                        <p class="worktime__days">Saturday - Sunday</p>
+                        <time class="worktime__time" >08:00 AM - 16:00 PM</time>
+                    </li>
+                </ul>
+                <address class="contacts__address">
+                    <a class="link" href="tel:+610383766284">+61(0) 383 766 284</a>
+                    <a class="link" href="mailto:noreply@envato.com">noreply@envato.com</a>
+                </address>                
+            </li>
+        </ul>
+        <ul class="contacts-option__list">
+            <li class="contacts-option__item">
+                <form action="https://www.google.com/maps/place/Ice+Cream+House/@38.6355062,-92.8332052,4z/data=!4m10!1m3!11m2!2shgSEWeWYEwYF0b3fXuFNHIs9glfLgg!3e1!3m5!1s0x89c25b2a4fd39a27:0x598d4925e5bb1cf8!8m2!3d40.6931342!4d-73.9544678!15sCgEqWgMiASqSAQ5pY2VfY3JlYW1fc2hvcA">
+                <button class="button button--red contacts-option__button" data-modal-open type="submit">Our Locations
+                    <svg class="contacts-option__icon" width="8" height="16">
+                        <use href="./images/sprite.svg#icon-arrow"></use>
+                    </svg>
+                </button>
+                </form>
+            </li>
+            <li class="contacts-option__item">
+                <button class="button  contacts-option__button" type="button">Franchise
+                    <svg class="contacts-option__icon" width="8" height="16">
+                        <use href="./images/sprite.svg#icon-arrow"></use>
+                    </svg>
+                </button>
+            </li>            
+        </ul>
+       
+    </div>
+
+    <!-- Pop-up Franchise -->
+
+    <div class="backdrop is-hidden" data-modal-fran>
+         <div class="modal contacts-modal">
+            <h2 class="contacts-modal__title">Bussiness aplication </h2>
+            <button class="contacts-modal__button--close" data-btn-close type="button">
+              <svg class="contacts-modal__close-icon" width="18" height="18">
+                <use href="./images/sprite.svg#icon-close"></use>
+              </svg> 
+            </button>      
+            <form class="popup-form" action="#">
+                <div class="popup-form__field">
+                  <label for="username" class="popup-form__label">Ім'я</label>
+                  <input class="popup-form__input" type="text" name="name" id="username">
+                </div>
+      
+                <div class="popup-form__field">
+                  <label for="usertel" class="popup-form__label">Телефон</label>
+                  <input class="popup-form__input" type="tel" name="tel" id="usertel" required="">      
+                  
+                </div>
+      
+                <div class="popup-form__field">
+                  <label for="usermail" class="popup-form__label">Пошта</label>
+                 
+                    <input class="popup-form__input" type="email" name="mail" id="usermail">
+                  
+                </div>
+      
+                <label class="popup-form__feedback">
+                  <span class="popup-form__label">Коментар</span>
+                  <textarea class="popup-form__textarea" name="comment" placeholder="Введіть текст"></textarea>
+                </label>
+      
+               
+      
+                <button class="button button--send" type="submit">Відправити</button>
+              </form>
+
+                  
+         </div>
+     </div>
+</section>
+
