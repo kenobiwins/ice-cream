@@ -1,12 +1,41 @@
-<section>
-  1
-  <button type="button" data-modal-open>
-    data-modal-open
-    <svg width="16px" height="16px">
-      <use href="./images/sprite.svg#icon-telegram"></use>
-    </svg>
-  </button>
-  <div class="is-hidden" data-modal>data-modal</div>
-  <button type="button" data-menu-button>data-menu-button</button>
-  <div class="header__inner" data-menu>data-menu</div>
+<section class="section">
+<div class="container">
+<div class="logo">
+<a class="logo_box" href="/">
+  <svg class="logo_box__icon" width="50" height="50">
+    <use href="./images/sprite.svg#icon-logo"></use>
+  </svg>
+  <span class="logo_box__text">icecream</span> 
+</a>
+</div>
+<button class="menu-button is-open" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+  <svg  width="16"; height="16";>
+    <use class="burger-menu" href="./images/sprite.svg#icon-burger"></use>
+    <use class="menu-close" href="./images/sprite.svg#icon-close"></use>
+  </svg>
+</button>
+<div class="mobile_menu is-open" id="menu-container" data-menu>
+  <nav class="mobile_menu__nav">
+    <button class="button " type="button">Buy now
+    </button>
+     <ul class="mobile_menu__list">
+      <li class="mobile_menu__item">
+        <a class="mobile_menu__link" href="#">Home</a>
+      </li>
+      <li class="mobile_menu__item">
+        <a class="mobile_menu__link" href="#">About us</a>
+      </li>
+      <li class="mobile_menu__item">
+        <a class="mobile_menu__link" href="#">How it’s made?</a>
+      </li>
+      <li class="mobile_menu__item">
+        <a class="mobile_menu__link" href="#">Our products</a>
+      </li>
+      <li class="mobile_menu__item">
+        <a class="mobile_menu__link" href="#">Contact</a>
+      </li>
+     </ul>
+  </nav>
+    </div>
+</div>
 </section>
