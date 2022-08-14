@@ -45,6 +45,7 @@
 .gallery-grid__item {
   float: left;
   overflow: hidden;
+  cursor: pointer;
   transition: transform var(--transition);
   @include mq(desktop) {
     width: 183px;
