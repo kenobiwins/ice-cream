@@ -165,8 +165,8 @@
   justify-content: center;
 
   min-width: 161px;
-  min-height: 44px;
-  padding: 10px 15px;
+  max-height: 44px;
+  padding: 10px 9px;
 
   @include mq(tablet) {
     min-width: 171px;
@@ -175,10 +175,21 @@
 
 .contacts-option__icon {
   margin-left: 11px;
+     
+  fill: var(--white-color);
+
+  .button--red:hover &,
+  .button--red:focus &{
+    fill: var(--text-button);
+  }
+}
+
+.contacts-option__icon--red {
+  fill:currentColor;
 }
 
 .backdrop {
-  padding: 50px 10px;
+  padding: 50px 0;
 }
 
 .backdrop.is-hidden {
@@ -187,23 +198,31 @@
   pointer-events: none;
 }
 
-.contacts-modal {
-  max-width: 528px;
-  width: 100%;
+.backdrop.is-hidden .contacts-modal{
+  transform:translate(-50%, -50%) scale(1.2);
+  opacity: 0;
+}    
 
+.contacts-modal {
+  padding: 40px 40px;
+  max-width: 528px;
+  width: 100vw;
+  height:auto;
+  // overflow-y: auto;
+   
   background-image: linear-gradient(
       to right,
       rgba(255, 184, 202, 0.9),
       rgba(255, 184, 202, 0.7)
     ),
     url(../images/hero/mobile/slider-pic1.png);
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;  
 }
 
 .contacts-modal__button--close {
   position: absolute;
   right: 10px;
-  top: 8px;
+  top: 10px;
   width: 30px;
   height: 30px;
   display: flex;
@@ -214,5 +233,77 @@
   background-size: contain;
   border: 1px solid var(--text-button);
   border-radius: 50%;
-  cursor: pointer;
+  cursor:pointer;
+
+  &:hover,
+  &:focus{
+    background-color: var(--text-button)
+  }
 }
+
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contacts-modal__title{
+  margin-bottom: 10px;
+
+  @include fonts(24px, 34px, 700, 0.04em);
+  text-transform: uppercase;
+
+  text-align: center;
+
+  color: var(--white-color);
+}
+
+.contacts-modal__text{
+  margin-bottom: 10px;
+
+  color: var(--icon-background-accent);
+  @include fonts(10px, 20px, 500, 0.04em);
+  text-transform: uppercase;
+
+}
+
+.star{
+  color: var(--icon-background-accent);
+}
+
+.contacts-form__label {
+  @include fonts(14px, 20px)
+}
+
+.contacts-form__input{
+  width: 100%;
+  padding: 5px 10px;
+
+  border: 1px solid var(--label-color);
+  border-radius: 5px;
+
+  transition: border-color var(--transition);
+  
+  &:focus{
+    outline:2px solid var(--text-accent);
+  }
+}
+
+.contacts-form__radio {
+  accent-color:var(--icon-background-accent); 
+}
+
+.button--send {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  padding: 10px 15px;
+
+  min-width: 200px;
+  min-height: 44px; 
+
+  @include fonts(20px, 30px, 700, 0.04em);
+  text-transform: uppercase;  
+}
+
+
