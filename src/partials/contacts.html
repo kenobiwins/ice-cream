@@ -101,7 +101,7 @@
             <form class="contacts-form" action="#">
                 <div class="contacts-form__field">
                   <label for="username" class="contacts-form__label">Company Name <span class="star">*</span></label>
-                  <input class="contacts-form__input" type="text" name="name" id="username">                
+                  <input class="contacts-form__input" type="text" name="name" id="username" autofocus required="">                
                 </div>
       
                 <div class="contacts-form__field">
@@ -111,17 +111,17 @@
       
                 <div class="contacts-form__field">
                   <label for="usermail" class="contacts-form__label">Email <span class="star">*</span></label>
-                  <input class="contacts-form__input" type="email" name="mail" id="usermail" placeholder="example@example.com">                
+                  <input class="contacts-form__input" type="email" name="mail" id="usermail" required="" placeholder="example@example.com">                
                 </div>
 
                 <div class="contacts-form__field">
                   <label for="city" class="contacts-form__label">City <span class="star">*</span></label>
-                  <input class="contacts-form__input" type="text" id="city">
+                  <input class="contacts-form__input" type="text" id="city" required="">
                 </div>
 
                 <div class="contacts-form__field">
                   <label for="state" class="contacts-form__label">State<span class="star">*</span></label>
-                  <select id="state" name="state" class="contacts-form__input">
+                  <select id="state" name="state" class="contacts-form__input contacts-form__select" required="">
                     <option value="" disabled="" selected="" class="contacts-form__state">Please Select...</option>
                     <option value="Alabama" class="contacts-form__state">Alabama</option>
                     <option value="Alaska" class="contacts-form__state">Alaska</option>
@@ -179,9 +179,9 @@
 
                 <div class="contacts-form__field">
                     <label for="success" class="contacts-form__label">Did you have run in franchise concept? <span class="star">*</span></label>
-                    <input class="contacts-form__radio" type="radio" id="success" name="work" value="yes">Yes
-                    <input class="contacts-form__radio" type="radio" id="success" name="work" value="no">No
-                </div>     
+                    <input class="contacts-form__radio" type="radio" id="success" name="work" value="yes" required="">Yes
+                    <input class="contacts-form__radio" type="radio" id="success" name="work" value="no" required="">No
+                </div> 
                 <button class="button button--red button--send" type="submit">Submit</button>
               </form>
 

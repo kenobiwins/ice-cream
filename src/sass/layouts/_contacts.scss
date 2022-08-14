@@ -185,7 +185,11 @@
 }
 
 .contacts-option__icon--red {
-  fill:var(--text-button);
+  fill:currentColor;
+}
+
+.backdrop {
+  padding: 50px 0;
 }
 
 .backdrop.is-hidden {
@@ -200,11 +204,12 @@
 }    
 
 .contacts-modal {
-  padding: 60px 40px;
+  padding: 40px 40px;
   max-width: 528px;
-  width: 100%;
-  height: auto;
- 
+  width: 100vw;
+  height:auto;
+  // overflow-y: auto;
+   
   background-image: linear-gradient(
       to right,
       rgba(255, 184, 202, 0.9),
@@ -217,7 +222,7 @@
 .contacts-modal__button--close {
   position: absolute;
   right: 10px;
-  top: 8px;
+  top: 10px;
   width: 30px;
   height: 30px;
   display: flex;
@@ -239,11 +244,11 @@
 .contacts-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 
 .contacts-modal__title{
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
   @include fonts(24px, 34px, 700, 0.04em);
   text-transform: uppercase;
@@ -266,9 +271,13 @@
   color: var(--icon-background-accent);
 }
 
+.contacts-form__label {
+  @include fonts(14px, 20px)
+}
+
 .contacts-form__input{
   width: 100%;
-  padding: 10px;
+  padding: 5px 10px;
 
   border: 1px solid var(--label-color);
   border-radius: 5px;
@@ -287,7 +296,7 @@
 .button--send {
   display: block;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 20px;
   padding: 10px 15px;
 
   min-width: 200px;
