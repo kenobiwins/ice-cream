@@ -67,12 +67,13 @@
   background-color: var(--icon-background);
   cursor: pointer;
 
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--transition);
 
   &:hover,
   &:focus {
     background-color: var(--icon-background-accent);
+    animation: rubberBand;
+    animation-duration: 1s;
   }
 }
 
@@ -81,8 +82,16 @@
 }
 
 .footer__contacts-accent {
+  display: inline-block;
+
   color: var(--accent-font-color);
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    animation: flip;
+    animation-duration: 1s;
+  }
 }
 
 .footer__copyright {
