@@ -9,7 +9,7 @@
 
   line-height: 1.5;
   text-align: center;
-  text-transform: uppercase;;
+  text-transform: uppercase;
 }
 
 .section__title {
@@ -30,7 +30,7 @@
   background-color: var(--card-color-first);
   border-radius: 24px;
 
-  &-cofee {
+  &-coffee {
     background-color: var(--card-color-second);
   }
 
@@ -40,22 +40,23 @@
 }
 
 .product-cream::before {
-content: '';
-position: absolute;
-top: 0;
-left: 50%;
-z-index: 2;
-transform: translate(-50%, -50%);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
 
-width: 280px;
-height: 280px;
+  width: 280px;
+  height: 280px;
 
-background-image: url(../images/products/mobile/product-pic1.png);
-@media (min-device-ratio: 2),
+  background-image: url(../images/products/mobile/product-pic1.png);
+  background-size: contain;
+  @media (min-device-ratio: 2),
     (min-resolution: 2dppx),
     (min-resolution: 192dpi) {
-      background-image: url(../images/products/mobile/product-pic1@2x.png);
-    }
+    background-image: url(../images/products/mobile/product-pic1@2x.png);
+  }
 }
 
 .product-coffee::before {
@@ -65,37 +66,39 @@ background-image: url(../images/products/mobile/product-pic1.png);
   left: 50%;
   z-index: 2;
   transform: translate(-50%, -50%);
-  
+
   width: 280px;
   height: 280px;
   background-image: url(../images/products/mobile/product-pic2.png);
+  background-size: contain;
 
   @media (min-device-ratio: 2),
     (min-resolution: 2dppx),
     (min-resolution: 192dpi) {
-      background-image: url(../images/products/mobile/product-pic2@2x.png);
-    }
+    background-image: url(../images/products/mobile/product-pic2@2x.png);
+  }
 }
 
 .product-milkshakes::before {
   content: '';
   content: '';
-position: absolute;
-top: 0;
-left: 50%;
-z-index: 2;
-transform: translate(-50%, -50%);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
 
-width: 280px;
-height: 280px;
+  width: 280px;
+  height: 280px;
 
   background-image: url(../images/products/mobile/product-pic3.png);
+  background-size: contain;
 
   @media (min-device-ratio: 2),
     (min-resolution: 2dppx),
     (min-resolution: 192dpi) {
-      background-image: url(../images/products/mobile/product-pic3@2x.png)
-    }
+    background-image: url(../images/products/mobile/product-pic3@2x.png);
+  }
 }
 
 .product__name {
@@ -105,7 +108,7 @@ height: 280px;
   text-align: center;
   text-transform: uppercase;
   color: var(--white-color);
-  
+
   @include mq(mobile) {
     @include fonts(20px, 23px, 400);
   }
@@ -130,13 +133,13 @@ height: 280px;
 }
 
 .ellipse::before {
-position: absolute;
-left: 10px;
+  position: absolute;
+  left: 10px;
 }
 
 .ellipse::after {
-position: absolute;
-right: 10px;
+  position: absolute;
+  right: 10px;
 }
 
 .product__discr {
@@ -151,9 +154,9 @@ right: 10px;
 }
 
 .arrow-right {
- margin-left: auto;
- margin-right: auto;
- width: 40px;
- height: 40px;
- border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
