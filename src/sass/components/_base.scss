@@ -3,6 +3,10 @@ body {
   @include fonts(16px, 30px, 500, 0.04em);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .card-set {
   display: flex;
   justify-content: center;
