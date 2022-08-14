@@ -92,15 +92,6 @@ height: 280px;
   color: var(--white-color);
 }
 
-.separ {
-  position: relative;
-  width: 26px;
-  height: 6px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 32px;
-}
-
 .ellipse,
 .ellipse::before,
 .ellipse::after {
@@ -115,16 +106,17 @@ height: 280px;
 .ellipse {
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 32px;
 }
 
 .ellipse::before {
 position: absolute;
-left: 0;
+left: 127px;
 }
 
 .ellipse::after {
 position: absolute;
-right: 0;
+right: 127px;
 }
 
 .product__discr {
