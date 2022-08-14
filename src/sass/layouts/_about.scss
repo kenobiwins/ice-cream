@@ -1,7 +1,136 @@
-section {
-  background-color: aqua;
+.about {
+  background-color: var(--background-section-primary);
+  @include section(60px, 20px);
+  @include mq(tablet) {
+    @include section(60px, 30px);
+  }
+  @include mq(desktop) {
+    background-image: url(../images/about/desktop/milk1.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/about/desktop/milk1@2x.png);
+    }
+  }
 }
-.slick-dots li.slick-active button:before {
-  opacity: 0.75;
-  color: palegoldenrod;
+
+.about__label {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.about__title {
+  text-align: center;
+  margin-bottom: 32px;
+  @include mq(tablet) {
+    margin-bottom: 40px;
+  }
+  @include mq(desktop) {
+    margin-bottom: 60px;
+  }
+}
+
+.about__wrapper {
+  @include mq(mobile) {
+    background-image: url(../images/about/mobile/milk1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/about/mobile/milk1@2x.png);
+    }
+  }
+  @include mq(tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+  @include mq(desktop) {
+    gap: 99px;
+  }
+}
+
+.about__info {
+  @include mq(mobile) {
+    background-image: url(../images/about/mobile/milk1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/about/mobile/milk1@2x.png);
+    }
+  }
+}
+
+.about__item {
+  max-width: 220px;
+  margin-bottom: 40px;
+  @include mq(tablet) {
+    max-width: 334px;
+  }
+  @include mq(desktop) {
+    max-width: 463px;
+  }
+}
+
+.about__top-text {
+  @include fonts(12px, 19px);
+
+  @include mq(tablet) {
+    @include fonts(14px, 25px);
+  }
+  @include mq(desktop) {
+    @include fonts(16px, 28px);
+  }
+  color: var(--text-color);
+}
+.about__text {
+  @include fonts(12px, 19px);
+  color: var(--text-secondary-color);
+  @include mq(tablet) {
+    @include fonts(14px, 25px);
+  }
+  @include mq(desktop) {
+    @include fonts(14px, 27px);
+  }
+}
+
+.about__text--bottom {
+  margin-top: 20px;
+}
+
+.about__btn {
+  @include fonts(14px, 18px, 700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: center;
+
+  width: 176px;
+  height: 44px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  @include mq(tablet) {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+  @include mq(desktop) {
+    margin-bottom: 60px;
+  }
+}
+.about-icon {
+  fill: var(--text-button);
+  margin-left: 15px;
 }
