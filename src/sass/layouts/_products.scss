@@ -1,7 +1,5 @@
 .products {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: var(--background-section-color);
+  background-color: var(--background-white);
 }
 
 .section__label {
@@ -9,32 +7,33 @@
 
   line-height: 1.5;
   text-align: center;
-  text-transform: uppercase;
-  color: var(--background-secondary-color);
+  text-transform: uppercase;;
 }
 
 .section__title {
-  margin-bottom: 8px;
+  margin-bottom: 148px;
   line-height: 1.15;
   text-align: center;
   text-transform: uppercase;
   color: var(--title-color);
 }
 
+.card-set {
+  gap: 140px;
+}
+
 .product {
   position: relative;
-  padding-top: 140px;
-  padding-bottom: 40px;
-  margin-top: 140px;
-  background-color: var(--background-secondary-color);
+  padding: 140 39 40 41;
+  background-color: var(--card-color-first);
   border-radius: 24px;
 
   &-cofee {
-    background-color: #F0D1A5;
+    background-color: var(--card-color-second);
   }
 
   &-milkshakes {
-    background-color: #C2E297;
+    background-color: var(--card-color-third);
   }
 }
 
@@ -50,6 +49,11 @@ width: 280px;
 height: 280px;
 
 background-image: url(../images/products/mobile/product-pic1.png);
+@media (min-device-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+      background-image: url(../images/products/mobile/product-pic1@2x.png);
+    }
 }
 
 .product-coffee::before {
@@ -62,7 +66,13 @@ background-image: url(../images/products/mobile/product-pic1.png);
   
   width: 280px;
   height: 280px;
-  background-image: url(../images/products/mobile/product-pic2.png)
+  background-image: url(../images/products/mobile/product-pic2.png);
+
+  @media (min-device-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+      background-image: url(../images/products/mobile/product-pic2@2x.png);
+    }
 }
 
 .product-milkshakes::before {
@@ -77,7 +87,13 @@ transform: translate(-50%, -50%);
 width: 280px;
 height: 280px;
 
-  background-image: url(../images/products/mobile/product-pic3.png)
+  background-image: url(../images/products/mobile/product-pic3.png);
+
+  @media (min-device-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+      background-image: url(../images/products/mobile/product-pic3@2x.png)
+    }
 }
 
 .product__name {
@@ -105,6 +121,7 @@ height: 280px;
 }
 
 .ellipse {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 32px;
@@ -112,17 +129,15 @@ height: 280px;
 
 .ellipse::before {
 position: absolute;
-left: 127px;
+left: 10px;
 }
 
 .ellipse::after {
 position: absolute;
-right: 127px;
+right: 10px;
 }
 
 .product__discr {
-  padding-left: 41px;
-  padding-right: 39px;
   margin-bottom: 32px;
 
   text-align: center;
@@ -133,7 +148,7 @@ right: 127px;
   }
 }
 
-.button--arrow {
+.arrow-right {
  margin-left: auto;
  margin-right: auto;
  width: 40px;
