@@ -44,7 +44,8 @@
 
 .gallery-grid__item {
   float: left;
-
+  overflow: hidden;
+  transition: transform var(--transition);
   @include mq(desktop) {
     width: 183px;
     height: 183px;
@@ -61,7 +62,6 @@
   }
   &:hover {
     transform: scale(1.3);
-    transition: 250ms;
   }
 }
 
@@ -82,8 +82,7 @@
   }
 
   &:hover {
-    transform: scale(1.3);
-    transition: 250ms;
+    transform: scale(1.2);
   }
 }
 
