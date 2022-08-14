@@ -84,12 +84,13 @@ height: 280px;
   margin-top: 20px;
   margin-bottom: 32px;
   font-family: 'Titan One', cursive;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.15;
   text-align: center;
   text-transform: uppercase;
   color: var(--white-color);
+  
+  @include mq(mobile) {
+    @include fonts(20px, 23px, 400);
+  }
 }
 
 .ellipse,
@@ -123,11 +124,13 @@ right: 127px;
   padding-left: 41px;
   padding-right: 39px;
   margin-bottom: 32px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.52;
+
   text-align: center;
   color: var(--white-color);
+
+  @include mq(mobile) {
+    @include fonts(14px, 21px, 700);
+  }
 }
 
 .button--arrow {
