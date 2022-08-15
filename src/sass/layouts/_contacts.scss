@@ -207,8 +207,8 @@
   padding: 40px 40px;
   max-width: 528px;
   width: 100vw;
-  height:auto;
-  // overflow-y: auto;
+  height: auto;
+  overflow-y: auto;
    
   background-image: linear-gradient(
       to right,
@@ -288,6 +288,14 @@
     outline:2px solid var(--text-accent);
   }
 }
+
+// .contacts-form__radio{
+//   @media screen and (max-width:480px){
+//     display: flex;
+//     flex-wrap: wrap;
+//     gap: 10px;
+//   }  
+// }
 
 .contacts-form__radio {
   accent-color:var(--icon-background-accent); 
