@@ -1,0 +1,131 @@
+.header {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  right: 0;
+  @include mq(tablet) {
+    top: 32px;
+  }
+  @include mq(desktop) {
+    top: 37px;
+  }
+}
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+.menu-button.is-open {
+  @include mq(tablet) {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+  }
+}
+
+.header__menu {
+  width: 250px;
+  position: absolute;
+  top: 0;
+  transform: translate(-100%, 0%);
+  padding-top: 58px;
+  opacity: 0;
+  z-index: 100;
+  pointer-events: none;
+  @include fonts(14px, 18px, 700);
+  background-color: var(--background-mobile-menu);
+  transition: transform var(--transition), opacity var(--transition);
+
+  @include mq(mobile) {
+    left: 0;
+    opacity: 1;
+  }
+  @include mq(tablet) {
+    position: fixed;
+    right: 0;
+    transform: translate(0px, 0px);
+    height: 100vh;
+  }
+  &.is-open {
+    pointer-events: all;
+    @include mq(mobile) {
+      transform: translate(0%, 0%);
+    }
+    @include mq(tablet) {
+      opacity: 1;
+    }
+  }
+  @include mq(mobile) {
+    width: 100%;
+    height: 100vh;
+  }
+}
+.header__button {
+  display: flex;
+  align-items: center;
+  padding: 10px 43px;
+  gap: 14px;
+}
+.header__button--tab-desk {
+  @include mq(mobile) {
+    display: none;
+  }
+  @include mq(tablet) {
+    margin-left: 32px;
+    padding: 10px 32px;
+
+    .menu-button.is-open ~ & {
+      display: none;
+    }
+  }
+}
+.header__button--mobile {
+  @media screen and (max-width: 1199px) {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 19px;
+  }
+}
+
+.header__logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-right: auto;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  &__text {
+    font-family: 'Titan One', cursive;
+    text-transform: uppercase;
+    color: var(--title-color);
+    @include fonts(30px, 35px);
+  }
+}
+.site-nav {
+  color: var(--white-color);
+  @media screen and (max-width: 1199px) {
+    text-indent: 20px;
+  }
+}
+.site-nav__item {
+  position: relative;
+  &:nth-child(1)::before,
+  &::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    opacity: 0.2;
+  }
+}
+.site-nav__link {
+  padding: 13px 0;
+  @include mq(desktop) {
+    padding: 16px 0;
+  }
+}
