@@ -24,7 +24,7 @@
   padding-top: 58px;
   opacity: 0;
   z-index: 100;
-
+  pointer-events: none;
   @include fonts(14px, 18px, 700);
   background-color: var(--background-mobile-menu);
   transition: transform var(--transition), opacity var(--transition);
@@ -40,6 +40,7 @@
     height: 100vh;
   }
   &.is-open {
+    pointer-events: all;
     @include mq(mobile) {
       transform: translate(0%, 0%);
     }
