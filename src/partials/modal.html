@@ -1,6 +1,6 @@
-<div class="backdrop" data-modal>
+<div class="backdrop is-hidden" data-modal>
   <div class="modal">
-    <button class="modal-close data-modal-close" type="button">
+    <button class="modal-close" data-modal-btn="close" type="button">
       <svg class="modal-close__icon">
         <use
           href="./images/sprite.svg#icon-close"
@@ -12,7 +12,7 @@
     <p class="modal__discount">Get 10% off with your first purchase</p>
     <form class="form">
       <p class="form__options">Choose a product</p>
-      <div class="form__group" role="group" aria-labelledby="order-details">
+      <div class="form__group" role="group">
         <div class="form__order">
           <input
             class="checkbox visually-hidden"
@@ -24,7 +24,7 @@
           <label class="checkbox__lable" for="ice-crem">ice cream</label>
 
           <label class="form__ammount">
-            <p class="form__amount-title">order quantity</p>
+            <span class="form__amount-title">order quantity</span>
             <input
               class="form__amount-counter"
               type="number"
@@ -46,7 +46,7 @@
           <label class="checkbox__lable" for="ice-coffee">ice coffee</label>
 
           <label class="form__ammount">
-            <p class="form__amount-title">order quantity</p>
+            <span class="form__amount-title">order quantity</span>
             <input
               class="form__amount-counter"
               type="number"
@@ -68,7 +68,7 @@
 
           <label class="checkbox__lable" for="milkshake">milkshake</label>
           <label class="form__ammount">
-            <p class="form__amount-title">order quantity</p>
+            <span class="form__amount-title">order quantity</span>
             <input
               class="form__amount-counter"
               type="number"
@@ -81,14 +81,14 @@
         </div>
       </div>
 
-      <div class="form__group" role="group" aria-labelledby="contact-details">
+      <div class="form__group-peculiars" role="group">
         <div class="form__contacts">
           <label class="form__lable">
             <span class="form__text">Your name</span>
             <input
               class="form__input"
               type="text"
-              name="username"
+              name="name"
               placeholder="Jane Smith"
               autofocus
               required
