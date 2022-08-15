@@ -4,8 +4,8 @@ background-color: var(--background-primary-color);
 .hero__container{
   position: relative;
 
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   overflow: hidden;
 }
 
@@ -37,7 +37,7 @@ font-size: 26px;
   position: absolute;
   bottom: 0;
   right: 32px;
-
+z-index: 1;
   display: flex;
   &::before {
       content: '';
@@ -50,11 +50,10 @@ font-size: 26px;
       height: 344px;
       border-radius: 50%;
       background-color: var(--background-secondary-color);
+      z-index: -1;
     }
-    &-img{
-      z-index: 4;
     }
-}
+
 
 .hero__button {
   font-size: 8px;
@@ -184,10 +183,12 @@ font-size: 26px;
           margin-bottom: 7px;
           z-index: 5;
     }
+
 .hero__bottom-line{
 display: flex;
 justify-content:space-between
 }
+
     .hero__ice-cream {
       left: 322;
       &::before {
