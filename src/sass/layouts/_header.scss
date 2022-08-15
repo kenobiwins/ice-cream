@@ -1,8 +1,14 @@
 .header {
   position: absolute;
-  top: 0;
+  top: 8px;
   left: 0;
   right: 0;
+  @include mq(tablet) {
+    top: 32px;
+  }
+  @include mq(desktop) {
+    top: 37px;
+  }
 }
 .header__container {
   display: flex;
