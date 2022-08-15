@@ -74,6 +74,7 @@
 .header__button {
   display: flex;
   align-items: center;
+  z-index: 20;
   @media screen and (max-width: 1199px) {
     padding: 10px 43px;
     gap: 14px;
