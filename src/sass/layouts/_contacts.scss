@@ -204,11 +204,12 @@
 }    
 
 .contacts-modal {
-  padding: 40px 40px;
+  padding: 30px 30px;
   max-width: 528px;
   width: 100vw;
   height: auto;
   overflow-y: auto;
+  margin: 5px;
    
   background-image: linear-gradient(
       to right,
@@ -241,15 +242,7 @@
   }
 }
 
-.contacts-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
 .contacts-modal__title{
-  margin-bottom: 10px;
-
   @include fonts(24px, 34px, 700, 0.04em);
   text-transform: uppercase;
 
@@ -259,12 +252,17 @@
 }
 
 .contacts-modal__text{
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 
   color: var(--icon-background-accent);
-  @include fonts(10px, 20px, 500, 0.04em);
+  @include fonts(8px, 15px, 500, 0.04em);
   text-transform: uppercase;
+}
 
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .star{
@@ -272,33 +270,34 @@
 }
 
 .contacts-form__label {
-  @include fonts(14px, 20px)
+  @include fonts(12px, 20px);
 }
 
 .contacts-form__input{
   width: 100%;
   padding: 5px 10px;
 
+  @include fonts(14px, 18px);
+
   border: 1px solid var(--label-color);
   border-radius: 5px;
 
   transition: border-color var(--transition);
   
+  &:hover,
   &:focus{
     outline:2px solid var(--text-accent);
   }
 }
 
-// .contacts-form__radio{
-//   @media screen and (max-width:480px){
-//     display: flex;
-//     flex-wrap: wrap;
-//     gap: 10px;
-//   }  
-// }
-
 .contacts-form__radio {
-  accent-color:var(--icon-background-accent); 
+  display: flex;
+  flex-direction:row;
+  gap: 10px;
+
+  @include fonts (12px, 20px);
+ 
+  accent-color:var(--icon-background-accent);  
 }
 
 .button--send {
@@ -310,7 +309,7 @@
   min-width: 200px;
   min-height: 44px; 
 
-  @include fonts(20px, 30px, 700, 0.04em);
+  @include fonts(18px, 30px, 700, 0.04em);
   text-transform: uppercase;  
 }
 
