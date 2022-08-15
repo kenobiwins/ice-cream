@@ -1,12 +1,52 @@
-<section>
-  1
-  <button type="button" data-modal-open>
-    data-modal-open
-    <svg width="16px" height="16px">
-      <use href="./images/sprite.svg#icon-telegram"></use>
-    </svg>
-  </button>
-  <div class="is-hidden" data-modal>data-modal</div>
-  <button type="button" data-menu-button>data-menu-button</button>
-  <div class="header__inner" data-menu>data-menu</div>
-</section>
+<header class="header">
+  <div class="container header__container">
+    <div class="header__logo-wrapper">
+      <svg class="logo">
+        <use href="./images/sprite.svg#icon-logo"></use>
+      </svg>
+      <span class="logo__text">icecream</span>
+    </div>
+    <button class="menu-button" data-menu-button>
+      <span class="burger-menu"></span>
+    </button>
+    <button
+      class="header__button header__button--tab-desk button"
+      type="button"
+    >
+      Buy now
+      <svg class="icon" width="16px" height="16px">
+        <use href="./images/sprite.svg#icon-arrow"></use>
+      </svg>
+    </button>
+    <div class="header__menu" data-menu>
+      <button
+        class="header__button header__button--mobile button"
+        type="button"
+      >
+        Buy now
+        <svg class="icon" width="16px" height="16px">
+          <use href="./images/sprite.svg#icon-arrow"></use>
+        </svg>
+      </button>
+      <nav class="site-nav">
+        <ul>
+          <li class="site-nav__item">
+            <a class="site-nav__link link">Home</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link link">About us</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link link">How it’s made?</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link link">Our products</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

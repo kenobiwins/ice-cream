@@ -1,3 +1,92 @@
-section {
-  background-color: aquamarine;
+.advantages {
+  @include section(40px, 40px);
+
+  background-color: var(--background-section-primary);
+
+  &__list {
+    display: grid;
+    grid-template: none;
+    gap: 32px;
+  }
+  &__item {
+    width: 70%;
+  }
+
+  @each $num in 1, 2, 3 {
+    &__item:nth-child(#{$num}):before {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 50px;
+      background-repeat: no-repeat;
+      background-image: url(../images/advantages/pic#{$num}.webp);
+      // url(../images/advantages/pic#{$num}.png);
+      background-position-x: center;
+      background-size: contain;
+
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/advantages/pic#{$num}@2x.webp);
+        // url(../images/advantages/pic#{$num}@2x.png);
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    // @include fonts(36px, 41px, 400, 0.04em);
+  }
+
+  &__text {
+    @include fonts(12px, 20px, 700, 0.02em);
+    color: var(--text-color);
+  }
+
+  // TABLET
+  @include mq('tablet') {
+    @include section(60px, 60px);
+
+    &__title {
+      margin-top: 36px;
+      margin-bottom: 13px;
+    }
+
+    &__list {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 19px;
+    }
+
+    &__item {
+      width: auto;
+      margin-bottom: 16px;
+    }
+
+    &__text {
+      @include fonts(14px, 24px, 700, 0.02em);
+    }
+  }
+
+  // DESKTOP
+  @include mq('desktop') {
+    &__list {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0px 0px;
+    }
+
+    &__title {
+      margin-top: 40px;
+      margin-bottom: 16px;
+    }
+
+    &__item {
+      width: 60%;
+    }
+
+    &__text {
+      @include fonts(16px, 28px, 700, 0.02em);
+    }
+  }
 }

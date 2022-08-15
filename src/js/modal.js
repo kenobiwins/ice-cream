@@ -1,39 +1,35 @@
 (() => {
-  const modals = {
+  const refs = {
     // Modals
-    modalMain: document.querySelector('[data-modal]'),
-    modalLocation: document.querySelector('[data-modal-loc]'),
-    modalFran: document.querySelector('[data-modal-fran]'),
-    modalAbout: document.querySelector('[data-modal-about]'),
-  };
-
-  const buttons = {
+    modals: document.querySelectorAll('[data-modal]'),
     // buttons
-    btnClose: document.querySelector('[data-btn-close]'),
-    btnModal: document.querySelector('[data-btn-modal]'),
-    btnLocation: document.querySelector('[data-btn-loc]'),
-    btnFran: document.querySelector('[data-btn-fran]'),
-    btnAbout: document.querySelector('[data-btn-about]'),
+    buttons: document.querySelectorAll('[data-modal-btn]'),
   };
 
-  buttons.btnModal.addEventListener('click', toggle);
-  buttons.btnLocation.addEventListener('click', toggle);
-  buttons.btnFran.addEventListener('click', toggle);
-  buttons.btnAbout.addEventListener('click', toggle);
-  buttons.btnClose.addEventListener('click', toggle);
+  // Add listener to each button
+  for (const btn in refs.buttons) {
+    if (Object.hasOwnProperty.call(refs.buttons, btn)) {
+      const element = refs.buttons[btn];
+      element != undefined && element.addEventListener('click', toggle);
+    }
+  }
 
-  function toggle(e) {
-    let target = e.target;
-
-    target == buttons.btnModal && modals.modalMain.classList.toggle('is-hidden');
-    target == buttons.btnLocation && modals.modalLocation.classList.toggle('is-hidden');
-    target == buttons.btnFran && modals.modalFran.classList.toggle('is-hidden');
-    target == buttons.btnAbout && modals.modalAbout.classList.toggle('is-hidden');
-
-    if (target == buttons.btnClose) {
-      for (const modal in modals) {
-        if (modals[modal] != undefined) modals[modal].classList.remove('is-hidden');
+  function modalFunc(arr, attr) {
+    for (const key in arr) {
+      if (Object.hasOwnProperty.call(arr, key)) {
+        const element = arr[key];
+        if (attr == 'close') {
+          if (element != undefined) element.classList.add('is-hidden');
+        } else {
+          const elementAttr = arr[key].getAttribute('data-modal');
+          if (elementAttr == attr) element.classList.toggle('is-hidden');
+        }
       }
     }
+  }
+
+  function toggle(e) {
+    let targetAttr = e.currentTarget.getAttribute('data-modal-btn');
+    modalFunc(refs.modals, targetAttr);
   }
 })();

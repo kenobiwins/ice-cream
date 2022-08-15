@@ -1,0 +1,27 @@
+@keyframes bounce-up {
+  from {
+    transform: translateY(-5px);
+  }
+
+  to {
+    transform: translateY(5px);
+  }
+}
+
+.button-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  color: var(--white-color);
+
+  animation: bounce-up 1200ms linear infinite alternate both;
+  opacity: 0.7;
+  border-radius: 50%;
+  background-color: var(--reverse-accent-button);
+}

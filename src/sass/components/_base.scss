@@ -3,6 +3,10 @@ body {
   @include fonts(16px, 30px, 500, 0.04em);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .card-set {
   display: flex;
   justify-content: center;
@@ -51,8 +55,8 @@ body {
 }
 .title {
   font-family: 'Titan One', cursive;
-  color: var(--title-color);
   text-transform: uppercase;
+  color: var(--title-color);
   @include mq(mobile) {
     @include fonts(34px, 39px, 400, 0.04em);
   }
@@ -81,9 +85,14 @@ body {
 
 .link {
   display: block;
+  cursor: pointer;
   transition: color var(--transition);
   &:hover,
   &:focus {
     color: var(--accent-font-color);
   }
+}
+
+.icon {
+  fill: currentColor;
 }
