@@ -10,7 +10,7 @@
   }
 }
 
-.footer-title-container {
+.footer-tagline-container {
   margin-bottom: 40px;
 
   &:hover {
@@ -52,7 +52,7 @@
   }
 }
 
-.footer__title {
+.footer__tagline {
   margin-bottom: 16px;
 
   font-size: 18px;
@@ -64,7 +64,7 @@
   }
 }
 
-.footer__title-accent-word {
+.footer__tagline-accent-word {
   display: block;
 
   @include mq(desktop) {
@@ -127,7 +127,7 @@
 
   &:hover,
   &:focus {
-    animation: flip;
+    animation: heartBeat;
     animation-duration: 1s;
   }
 }
@@ -148,6 +148,11 @@
 
   @include mq(tablet) {
     padding-top: 7px;
+    padding-bottom: 3px;
+
+    @include mq(desktop) {
+      padding-bottom: 4px;
+    }
   }
 }
 
