@@ -4,19 +4,20 @@ background-color: var(--background-primary-color);
 .hero__container{
   position: relative;
 
-  height: 502px;  
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
 
 .hero__title{
-  position: absolute;
-  top: 194px;
-
+  position: relative;
+padding-top: 194px;
+padding-bottom: 158px;
    z-index: 4;
+  width: 218px;
 }
 
 .hero__title-wrapper{
-  width:218px ;
 font-size: 26px;
   line-height: 1.15;
   text-transform: uppercase;
@@ -31,29 +32,34 @@ font-size: 26px;
   }
 }
 
-.hero__circle{
-  position: absolute;  
-    top: 83px;
-    left: 36px;
-
-  width: 346px;
-  height: 344px;
-  border-radius: 50%;
-  background-color: var(--background-secondary-color);
-}
 
 .hero__ice-cream{
   position: absolute;
   bottom: 0;
-  left: 35%;
+  right: 32px;
 
-  z-index: 3;
+  display: flex;
+  &::before {
+      content: '';
+      position: absolute;
+      top: -9px;
+      left: -81px;
+  
+      display: flex;
+      width: 346px;
+      height: 344px;
+      border-radius: 50%;
+      background-color: var(--background-secondary-color);
+    }
+    &-img{
+      z-index: 4;
+    }
 }
 
 .hero__button {
   font-size: 8px;
   line-height: 1.25;
-  padding: 9px 14px;
+  padding: 7px 13px;
 
   &:not(:last-child) {
     margin-right: 4px;
@@ -79,127 +85,127 @@ font-size: 26px;
   
   }
 @media screen and(min-width:768px) {
-  .hero__container {
-      height: 416px;  
-  }
+    .hero__title {
+      width: 170px;
+      padding-top: 102px;
+      padding-bottom: 0;
+      margin-bottom: 20px;
+      &-wrapper {
+          font-size: 22px;
+          line-height: 1.14;
+          text-transform: uppercase;
+      
+          &--size {
+            font-size: 34px;
+            line-height: 0.9;
+          }
+        }
+    }  
+    .top-line{
+  display: flex;
+  justify-content:space-between
+}
+.hero__cafes {
+  margin-top: 92px;
+  position: relative;    
 
-  .hero__title-wrapper{
-  width:162px ;
-  font-size: 22px;
-  line-height: 1.14;
-  text-transform: uppercase;
-    
-    &--size{
-    font-size: 34px;
-    line-height: 0.9;
-    }
-  }
-
-  .hero__title {
-    top: 102px;    
-  }
-
-    .hero__ice-cream {
-      left: 322;
-    }
-    
-  .hero__milk {
+  &::before{
+    content: ' ';
     position: absolute;
-
-    left: 32px;
-    bottom: 16px;
-  }
-
-  .hero__girl {
-    position: absolute;
-
-    right: 32px;
-    bottom: 0;
-    z-index: 6;
-  }
-  .hero__lorem {      
-  position: absolute;
-  left: 23%;
-  top: 68%;
-  }
-
-    .hero__disc-arrow{
-      position: relative;
-
-      width: 130px;
-      font-family: 'DM Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 8px;
-        line-height: 1.5;
-        color: var(--white-color);
-  margin-bottom: 7px;
-  z-index: 5;
-    }
-  
-  .hero__cafes {    
-    position: absolute;    
-    top: 92px;
-    right: 33px;
-
-    width: 54px;
-  }
-  
-  .hero__food-trucks {    
-    position: absolute;
-    top: 152px;
-    right: 33px;
-
-    width: 54px;
-  }
-  .hero__small-circle{
-    position: absolute;
-    top: 0;
-    right: 0;
-
+        right: 0;
     width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: var(--white-color);
-    z-index: 1;
-      }
-  .hero__number-cafes-trucks{
-    position: relative;
-    left: 12px;
-
-    font-family: 'Titan One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 1.14;
-    color: var(--title-color);
-    padding-top: 3px;
-    z-index: 2;
+    display: flex;
+        height: 16px;
+        border-radius: 50%;
+        background-color: var(--white-color);
   }
-  .hero__title-cafes-trucks{
-    position: relative;
-    right: 8px;
+}
 
-font-family: 'DM Sans';
+.hero__food-trucks {
+  margin-top: 16px;
+  position: relative;
+  &::before {
+      content: ' ';
+      position: absolute;
+      right: 0;
+      width: 16px;
+      display: flex;
+      height: 16px;
+      border-radius: 50%;
+      background-color: var(--white-color);
+    }
+}
+
+
+
+.hero__number-cafes-trucks {
+  position: relative;
+
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.14;
+  color: var(--title-color);
+  padding-left: 10px;
+  padding-top: 4px;
+}
+
+.hero__title-cafes-trucks {
+  position: relative;
+  right: 8px;
+
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 8px;
   line-height: 1.25;
   text-align: right;
-      color: var(--white-color);
+  color: var(--white-color);
+}
+
+    .hero__milk {
+    display: flex;
+    margin-bottom: 16px;
+  }
+    .hero__lorem {
+      display: flex;
+      flex-direction: column;
+      padding-top: 40px;
+    }
+   .hero__disc-arrow {
+          width: 130px;
+          font-family: 'DM Sans';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 8px;
+          line-height: 1.5;
+          color: var(--white-color);
+          margin-bottom: 7px;
+          z-index: 5;
+    }
+.hero__bottom-line{
+display: flex;
+justify-content:space-between
+}
+    .hero__ice-cream {
+      left: 322;
+      &::before {
+              top: -37px;
+              left: -74px;
+              width: 335px;
+              height: 333px;}
+    }
+
+  .hero__girl {
+    display: flex;
+    z-index: 5;
+        align-items: flex-end;
   }
 
-  .hero__circle {
-      position: absolute;
-      top: 43px;
-      left: 248px;
-
-      width: 335px;
-      height: 333px;
-  }
   .hero__button-circle{
     width: 18px;
-    height: 100%;
+    height: 18px;
     padding: 0;
     border: none;
     border-radius: 50%;
@@ -210,108 +216,157 @@ font-family: 'DM Sans';
       }
 }
 }
-// @media screen and(max-width:1199.9px){
 
-// }
-@media screen and(min-width:1200px) {
-  .hero__container {
-    height: 664px;
-  }
-
-  .hero__title-wrapper {
-      width: 277px;
-      font-size: 38px;
-      line-height: 1.16;
-      text-transform: uppercase;
-      margin-bottom: 24px;
+  @media screen and(min-width:1200px) {    
+      .hero__title {
+        width: 280px;
+        padding-top: 147px;
+        padding-bottom: 0;
+        margin-bottom: 40px;
   
-      &--size {
-        font-size: 58px;
-        line-height: 0.9;
+        &-wrapper {
+                  font-size: 38px;
+                  line-height: 1.16;
+                  margin-bottom: 24px;
+          
+                  &--size {
+                    font-size: 58px;
+                  }
+          
+        }
       }
-  }
+  
+      .top-line {
+        display: flex;
+        justify-content: space-between
+      }
+  
+      .hero__cafes {
+        margin-top: 152px;
+        position: relative;
+  
+        &::before {
+          width: 30px;          
+          height: 30px;
+        }
+      }
+  
+      .hero__food-trucks {
+        margin-top: 15px;
+        position: relative;
+  
+        &::before {
+          width: 30px;
+          height: 30px;
+        }
+      }
+      .hero__number-cafes-trucks {
+        font-size: 46px;
+              line-height: 1.15;        
+      }
+  
+      .hero__title-cafes-trucks {
+        position: relative;
+        right: 18px;
+        font-size: 14px;
+        line-height: 1.29;
+      }
+  
+      .hero__milk {
+        display: flex;
+        margin-bottom: 60px;
 
-  .hero__title {
-    top: 147px;
-    
-  }
-
-  .hero__ice-cream {
-    // left: 57%;
-    left: 636px;
-  }
-    .hero__circle {
-      top: 54px;
-      left: 517px;
-      width: 534px;
-      height: 534px;
-    }
-
-  .hero__milk {
-    left: 16px;
-    bottom: 60px;
-  }
-
-  .hero__girl {
-    right: 16px;
-  }
-
-  .hero__lorem {
-    left: 229px;
-   top: 456px;
-  }
-
-  .hero__disc-arrow {   
-    width: 200px;
-     font-size: 14px;
-    line-height: 1.4;
-    margin-bottom: 20px;
-  }
-
-  .hero__cafes {
-    top: 152px;
-    right: 34px;
-
-    width: 79px;
-  }
-
-  .hero__food-trucks {
-    top: 244px;
-    right: 34px;
-
-    width: 85px;
-  }
-
-  .hero__small-circle {
-    top: -4px;
-    right: -18;
-
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-  }
-
-  .hero__number-cafes-trucks {
-    left: 25px;
-
-    font-size: 46px;
-    line-height: 1.15;
-  }
-
-  .hero__title-cafes-trucks {
-    font-size: 14px;
-    line-height: 1.29;
-  } 
-
-  .hero__button-circle {
+        animation-name: transition-milk;
+          animation-duration: 500ms;
+          animation-timing-function: linear;
+          animation-iteration-count: 1;
+          animation-direction: normal;
+      }
+      @keyframes transition-milk {
+        0%{
+          transform: translatex(-200px);
+        }
+                 100% {
+                   transform: translatex(0);
+                 }
+      }
+  
+      .hero__lorem {
+        display: flex;
+        flex-direction: column;
+        padding-top: 68px;
+      }
+  
+            .hero__disc-arrow {
+                  width: 200px;
+                   font-size: 14px;
+                  line-height: 1.4;
+                  margin-bottom: 20px;
+                }
+  
+      .hero__bottom-line {
+        display: flex;
+        justify-content: space-between
+      }
+  
+      .hero__ice-cream {
+        left: 636px;
+           &::before {
+               top: -54px;
+               left: -119px;
+          width: 534px;
+            height: 534px;
+             }
+             animation-name: transition-ice-cream;
+          animation-duration: 900ms;
+          animation-timing-function: linear;
+          animation-iteration-count: 1;
+          animation-direction:normal;
+      }
+            @keyframes transition-ice-cream {
+              0% {
+                transform: scale(0.6) ;
+              }
+              50% {
+                transform: scale(1.1) ;
+              }
+                             
+              100% {
+                transform: scale(1) ;
+              }
+            }
+       
+      .hero__girl {
+        display: flex;
+        z-index: 5;
+        animation-name: transition-girl;
+          animation-duration: 500ms;
+          animation-timing-function: linear;
+          animation-iteration-count: 1;
+          animation-direction:normal;
+        }
+        
+        @keyframes transition-girl {
+          0% {
+            transform: translatex(200px);
+          }
+        
+          100% {
+            transform: translatex(0);
+          }
+        }
+      
+     
+      .hero__button-circle {
     width: 26px;
   }
     .hero__button {
-      font-size: 18px;
+      font-size: 14px;
       line-height: 1.29;
       padding: 15px 21px;
       &:not(:last-child){
-        margin-right: 20px;
+        margin-right: 12px;
       }
     }
-}
+    }
+
