@@ -16,8 +16,12 @@
 }
 
 .menu-button.is-open {
+  position: fixed;
+  @include mq(mobile) {
+    right: 20px;
+    top: 20px;
+  }
   @include mq(tablet) {
-    position: fixed;
     right: 20px;
     top: 20px;
   }
@@ -26,45 +30,55 @@
 .header__menu {
   width: 250px;
   position: absolute;
-  top: 0;
-  transform: translate(-100%, 0%);
+  top: -8px;
+  transform: translate(0, -100%);
   padding-top: 58px;
   opacity: 0;
   z-index: 100;
-  pointer-events: none;
   @include fonts(14px, 18px, 700);
   background-color: var(--background-mobile-menu);
   transition: transform var(--transition), opacity var(--transition);
 
   @include mq(mobile) {
-    left: 0;
+    right: 0;
     opacity: 1;
+    height: 100vh;
   }
   @include mq(tablet) {
     position: fixed;
     right: 0;
-    transform: translate(0px, 0px);
+    transform: translate(0, -100%);
     height: 100vh;
   }
   &.is-open {
+    transform: translate(0%, 0%);
     pointer-events: all;
-    @include mq(mobile) {
-      transform: translate(0%, 0%);
-    }
-    @include mq(tablet) {
-      opacity: 1;
-    }
+    opacity: 1;
   }
-  @include mq(mobile) {
+  @include mq(desktop) {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row-reverse;
+    gap: 141px;
+    position: static;
+    pointer-events: all;
+    opacity: 1;
+    padding: 0;
+    transform: translate(0, 0);
     width: 100%;
-    height: 100vh;
+    height: auto;
+    background-color: transparent;
   }
 }
+
 .header__button {
   display: flex;
   align-items: center;
-  padding: 10px 43px;
-  gap: 14px;
+  z-index: 20;
+  @media screen and (max-width: 1199px) {
+    padding: 10px 43px;
+    gap: 14px;
+  }
 }
 .header__button--tab-desk {
   @include mq(mobile) {
@@ -73,7 +87,9 @@
   @include mq(tablet) {
     margin-left: 32px;
     padding: 10px 32px;
-
+    @include mq(desktop) {
+      display: none;
+    }
     .menu-button.is-open ~ & {
       display: none;
     }
@@ -101,7 +117,7 @@
     font-family: 'Titan One', cursive;
     text-transform: uppercase;
     color: var(--title-color);
-    @include fonts(30px, 35px);
+    @include fonts(24px, 29px);
   }
 }
 .site-nav {
@@ -109,23 +125,32 @@
   @media screen and (max-width: 1199px) {
     text-indent: 20px;
   }
-}
-.site-nav__item {
-  position: relative;
-  &:nth-child(1)::before,
-  &::after {
-    position: absolute;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 1px;
-    background-color: white;
-    opacity: 0.2;
+  &__list {
+    @include mq(desktop) {
+      display: flex;
+      gap: 35px;
+    }
+  }
+  &__link {
+    padding: 13px 0;
+    @include mq(desktop) {
+      padding: 16px 0;
+    }
   }
 }
-.site-nav__link {
-  padding: 13px 0;
-  @include mq(desktop) {
-    padding: 16px 0;
+
+.site-nav__item {
+  position: relative;
+  @media screen and (max-width: 1199px) {
+    &:nth-child(1)::before,
+    &::after {
+      position: absolute;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: white;
+      opacity: 0.2;
+    }
   }
 }
