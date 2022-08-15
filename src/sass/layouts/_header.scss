@@ -57,6 +57,7 @@
   }
   @include mq(desktop) {
     display: flex;
+    align-items: baseline;
     flex-direction: row-reverse;
     gap: 141px;
     position: static;
