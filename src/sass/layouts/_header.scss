@@ -1,11 +1,9 @@
-.section {
+.section{
   background-color: var(--background-primary-color);
 }
 
 .container {
-  position: relative;
   display: flex;
-  flex-direction: row;
   align-items: center;
 }
 
@@ -43,38 +41,53 @@
 }
 
 .mobile_menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-
-  width: 250px;
-  background-color: var(--background-mobile-menu);
-  transform: translateX(200%);
-  transition: var(--transition);
-
-  &.is-open {
-    transform: translateX(0);
-    z-index: 100;
-  }
-
-  &__list {
-    display: flex;
+  display: flex;
+  @media screen and(max-width:1199px) {
+    display: none;
     flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 254px;
+    height: 100%;
+
+    background-color: var(--background-mobile-menu);
+    transition: var(--transition);
+    transform: translateX(100%);
+
+    &.is-open {
+      display: block;
+      transform: translateX(0);
+    }
+
+    &__item {
+      border: 1px solid #e18298;
+      padding: 11px 20px;
+    }
   }
 
-  &__item {
-    border: 1px solid #e18298;
-    padding: 11px 20px;
+  @media screen and(min-width:1200px) {
+    flex-direction: row-reverse;
+    align-items: center;
   }
+}
 
-  &__nav {
-    margin-bottom: auto;
+@media screen and(min-width:1200px) {
+  .mobile_menu__list {
+    display: flex;
+    gap: 35px;
+    margin-right: 141px;
   }
 }
 
 .menu-button {
   transition: var(--transition);
+}
+
+.menu-button.menu-button.is-open {
+  position: absolute;
+  top: 16px;
+  right: 21px;
 }
 
 .menu-button .menu-close {
@@ -89,14 +102,36 @@
   display: none;
 }
 
-.button {
+.button-buy {
   min-width: 209px;
   margin-bottom: 19px;
   margin-top: 60px;
   margin-left: 20px;
+  margin-right: 20px;
   transition: var(--transition);
 
   &__space {
     padding-right: 16px;
   }
+
+  @media screen and(min-width:1200px) {
+    margin: 0;
+    min-width: 159px;
+  }
+}
+
+@media screen and(max-width:767px) {
+  .button-tablet {
+    display: none;
+  }
+}
+
+@media screen and(min-width:1200px) {
+  .button-tablet {
+    display: none;
+  }
+}
+
+.button-tablet {
+  margin-left: 32px;
 }

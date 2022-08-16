@@ -15,48 +15,58 @@
       aria-controls="menu-container"
       data-menu-button
     >
-      <svg width="16" ; height="16" ;>
+      <svg width="16"; height="16";>
         <use class="burger-menu" href="./images/sprite.svg#icon-burger"></use>
         <use class="menu-close" href="./images/sprite.svg#icon-close"></use>
       </svg>
     </button>
-    <div class="mobile_menu is-open" id="menu-container" data-menu>
-      <nav class="mobile_menu__nav">
-        <button class="button" type="button">
-          <span class="button__space">Buy now</span>
-          <svg
-            width="8"
-            height="10"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="m1.107 1 5.258 4-5.258 4"
-              stroke="#D41443"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-        <ul class="mobile_menu__list">
-          <li class="mobile_menu__item">
-            <a class="mobile_menu__link" href="#">Home</a>
-          </li>
-          <li class="mobile_menu__item">
-            <a class="mobile_menu__link" href="#">About us</a>
-          </li>
-          <li class="mobile_menu__item">
-            <a class="mobile_menu__link" href="#">How it’s made?</a>
-          </li>
-          <li class="mobile_menu__item">
-            <a class="mobile_menu__link" href="#">Our products</a>
-          </li>
-          <li class="mobile_menu__item">
-            <a class="mobile_menu__link" href="#">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <button class="button button-tablet" type="button">
+      <span class="button__space">Buy now</span>
+      <svg width="8" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="m1.107 1 5.258 4-5.258 4"
+          stroke="#D41443"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+    <nav class="mobile_menu is-open" id="menu-container" data-menu>
+      <button class="button button-buy" type="button">
+        <span class="button__space">Buy now</span>
+        <svg
+          width="8"
+          height="10"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m1.107 1 5.258 4-5.258 4"
+            stroke="#D41443"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <ul class="mobile_menu__list">
+        <li class="mobile_menu__item">
+          <a class="mobile_menu__link" href="#">Home</a>
+        </li>
+        <li class="mobile_menu__item">
+          <a class="mobile_menu__link" href="#">About us</a>
+        </li>
+        <li class="mobile_menu__item">
+          <a class="mobile_menu__link" href="#">How it’s made?</a>
+        </li>
+        <li class="mobile_menu__item">
+          <a class="mobile_menu__link" href="#">Our products</a>
+        </li>
+        <li class="mobile_menu__item">
+          <a class="mobile_menu__link" href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </section>
