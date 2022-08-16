@@ -15,7 +15,7 @@
       background-image: url(../images/about/desktop/milk1@2x.png);
     }
   }
-}
+}npm start
 
 
 
@@ -125,3 +125,39 @@
   fill: var(--text-button);
   margin-left: 15px;
 }
+
+// .modal {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%) scale(1);
+//   width: 528px;
+//   min-height: 581px;
+//   background-color: #FFFFFF;
+//   border-radius: 4px;
+//   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+// }
+
+// .modal-close-btn {
+//   position: absolute;
+//   right: 8px;
+//   top: 8px;
+//   width: 30px;
+//   height: 30px;
+//   border: 1px solid rgba(0, 0, 0, 0.1);
+//   background-color: transparent;
+//   border-radius: 50px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// .is-hidden {
+//   opacity: 0;
+//   visibility: hidden;
+//   pointer-events: none;
+// }
+
+// .no-scroll {
+//   overflow: hidden;
+// }
