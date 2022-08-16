@@ -14,7 +14,21 @@
     }
   }
 
+  var stopAllYouTubeVideos = () => { 
+    var iframes = document.querySelectorAll('iframe');
+    console.log(iframes);
+    Array.prototype.forEach.call(iframes, iframe => { 
+      iframe.contentWindow.postMessage(JSON.stringify({ event: 'command', 
+    func: 'stopVideo' }), '*');
+   });
+  }
+
   function modalFunc(arr, attr) {
+
+    if (attr == 'close') {
+      stopAllYouTubeVideos();
+    }
+
     for (const key in arr) {
       if (Object.hasOwnProperty.call(arr, key)) {
         const element = arr[key];
