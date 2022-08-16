@@ -204,11 +204,12 @@
 }    
 
 .contacts-modal {
-  padding: 40px 40px;
+  padding: 30px 30px;
   max-width: 528px;
   width: 100vw;
-  height:auto;
-  // overflow-y: auto;
+  height: auto;
+  overflow-y: auto;
+  margin: 5px 0;
    
   background-image: linear-gradient(
       to right,
@@ -216,7 +217,16 @@
       rgba(255, 184, 202, 0.7)
     ),
     url(../images/hero/mobile/slider-pic1.png);
-  background-repeat: no-repeat;  
+  background-repeat: no-repeat; 
+  
+  @include mq(mobile){
+    padding: 0 30px;
+  }
+
+  @include mq(tablet){
+    padding: 20px 30px;
+    margin-top: 8px;
+  }
 }
 
 .contacts-modal__button--close {
@@ -241,14 +251,8 @@
   }
 }
 
-.contacts-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
 .contacts-modal__title{
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 
   @include fonts(24px, 34px, 700, 0.04em);
   text-transform: uppercase;
@@ -256,15 +260,33 @@
   text-align: center;
 
   color: var(--white-color);
+
+  @include mq(mobile){
+    margin-top: 30px;
+
+    @include fonts(16px, 24px);
+  }
+
+  @include mq(tablet){
+    @include fonts(20px, 30px, 700, 0.04em);   
+  }
 }
 
 .contacts-modal__text{
-  margin-bottom: 10px;
-
-  color: var(--icon-background-accent);
-  @include fonts(10px, 20px, 500, 0.04em);
+  @include fonts(8px, 15px);
   text-transform: uppercase;
 
+  color: var(--icon-background-accent);
+}
+
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  @include mq(mobile){
+    gap: 4px;
+  }
 }
 
 .star{
@@ -272,38 +294,72 @@
 }
 
 .contacts-form__label {
-  @include fonts(14px, 20px)
+  @include fonts(12px, 20px);
+
+  @include mq(mobile){
+    @include fonts(10px, 16px);
+  }
 }
 
 .contacts-form__input{
   width: 100%;
   padding: 5px 10px;
 
+  @include fonts(12px, 18px);
+
   border: 1px solid var(--label-color);
   border-radius: 5px;
 
   transition: border-color var(--transition);
   
+  &:hover,
   &:focus{
     outline:2px solid var(--text-accent);
+  }
+
+  @include mq(mobile){
+    @include fonts(10px, 16px);
   }
 }
 
 .contacts-form__radio {
-  accent-color:var(--icon-background-accent); 
+  display: flex;
+  flex-direction:row;
+  gap: 10px;
+
+  @include fonts (12px, 20px);
+ 
+  accent-color:var(--icon-background-accent);  
+
+  @include mq(mobile){
+    @include fonts(10px, 16px);
+  }
 }
 
 .button--send {
   display: block;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 10px 15px;
 
   min-width: 200px;
   min-height: 44px; 
 
-  @include fonts(20px, 30px, 700, 0.04em);
+  @include fonts(18px, 30px, 700, 0.04em);
   text-transform: uppercase;  
+
+  @include mq(mobile){
+    min-width: 150px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 5px 15px;
+
+    @include fonts(16px, 24px, 700, 0.04em);
+  }
+
+  @include mq(tablet){
+    margin:0 auto;      
+  }
 }
 
 

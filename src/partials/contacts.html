@@ -11,11 +11,11 @@
                 <ul class="worktime__list">
                     <li class="worktime__item">
                         <p class="worktime__days">Monday - Friday</p>
-                        <time class="worktime__time">06:00 AM - 10:00 PM</time>
+                        <p class="worktime__time">06:00 AM - 10:00 PM</p>
                     </li>
                     <li class="worktime__item">
                         <p class="worktime__days">Saturday - Sunday</p>
-                        <time class="worktime__time" >08:00 AM - 16:00 PM</time>
+                        <p class="worktime__time" >08:00 AM - 16:00 PM</p>
                     </li>
                 </ul>
                 <address class="contacts__address">
@@ -32,11 +32,11 @@
                 <ul class="worktime__list">
                     <li class="worktime__item">
                         <p class="worktime__days">Monday - Friday</p>
-                        <time class="worktime__time">06:00 AM - 10:00 PM</time>
+                        <p class="worktime__time">06:00 AM - 10:00 PM</p>
                     </li>
                     <li class="worktime__item">
                         <p class="worktime__days">Saturday - Sunday</p>
-                        <time class="worktime__time" >08:00 AM - 16:00 PM</time>
+                        <p class="worktime__time" >08:00 AM - 16:00 PM</p>
                     </li>
                 </ul>
                 <address class="contacts__address">
@@ -53,11 +53,11 @@
                 <ul class="worktime__list">
                     <li class="worktime__item">
                         <p class="worktime__days">Monday - Friday</p>
-                        <time class="worktime__time">06:00 AM - 10:00 PM</time>
+                        <p class="worktime__time">06:00 AM - 10:00 PM</p>
                     </li>
                     <li class="worktime__item">
                         <p class="worktime__days">Saturday - Sunday</p>
-                        <time class="worktime__time" >08:00 AM - 16:00 PM</time>
+                        <p class="worktime__time" >08:00 AM - 16:00 PM</p>
                     </li>
                 </ul>
                 <address class="contacts__address">
@@ -68,7 +68,7 @@
         </ul>
         <ul class="contacts-option__list">
             <li class="contacts-option__item">
-                <form action="https://www.google.com/maps/place/Ice+Cream+House/@38.6355062,-92.8332052,4z/data=!4m10!1m3!11m2!2shgSEWeWYEwYF0b3fXuFNHIs9glfLgg!3e1!3m5!1s0x89c25b2a4fd39a27:0x598d4925e5bb1cf8!8m2!3d40.6931342!4d-73.9544678!15sCgEqWgMiASqSAQ5pY2VfY3JlYW1fc2hvcA">
+                <form action="https://www.google.com/maps/place/Ice+Cream+House/@38.6355062,-92.8332052,4z/data=!4m10!1m3!11m2!2shgSEWeWYEwYF0b3fXuFNHIs9glfLgg!3e1!3m5!1s0x89c25b2a4fd39a27:0x598d4925e5bb1cf8!8m2!3d40.6931342!4d-73.9544678!15sCgEqWgMiASqSAQ5pY2VfY3JlYW1fc2hvcA" target="_blank">
                 <button class="button button--red contacts-option__button" type="submit">Our Locations
                     <svg class="contacts-option__icon contacts-option__icon--white" width="15" height="30">
                         <use href="./images/sprite.svg#icon-arrow"></use>
@@ -92,7 +92,7 @@
          <div class="modal contacts-modal">
             <h2 class="contacts-modal__title">Business application </h2>
             <p class="contacts-modal__text">* Indicates required fields</p>
-            <button class="contacts-modal__button--close" data-modal="close" type="button">
+            <button class="contacts-modal__button--close" data-modal-btn="close" type="button">
               <svg class="contacts-modal__close-icon" width="18" height="18">
                 <use href="./images/sprite.svg#icon-close"></use>
               </svg> 
@@ -179,8 +179,10 @@
 
                 <div class="contacts-form__field">
                     <label for="success" class="contacts-form__label">Did you have run in franchise concept? <span class="star">*</span></label>
-                    <input class="contacts-form__radio" type="radio" id="success" name="work" value="yes" required="">Yes
-                    <input class="contacts-form__radio" type="radio" id="success" name="work" value="no" required="">No
+                    <div class="contacts-form__radio">
+                      <input type="radio" id="success" name="work" value="yes" required="">Yes
+                      <input type="radio" id="fail" name="work" value="no" required="">No
+                    </div>
                 </div> 
                 <button class="button button--red button--send" type="submit">Submit</button>
               </form>
