@@ -240,11 +240,13 @@
       -webkit-filter: url(#liquid);
       filter: url(#liquid);
       z-index: -1;
+      width: 300px;
+      height: 160px;
       opacity: 0;
       animation: fade-in 0.1s linear 0.4s forwards;
       position: absolute;
-      bottom: 75px;
-      left: 72px;
+      bottom: 86px;
+      left: -75px;
       justify-content: center;
   
       &__filter {
@@ -266,9 +268,9 @@
       }
   
       &__drop1 {
-        bottom: 10px;
+        bottom: -2px;
         width: 56px;
-        height: 17px;
+        height: 21px;
   
         border-radius: 0;
       }
@@ -280,11 +282,11 @@
       @include mq('tablet') {}
   
       @include mq('desktop') {
-        bottom: 122px;
-        left: 100px;
+        bottom: 138px;
+        left: -43px;
   
         &__drop1 {
-          bottom: 10px;
+          bottom: -6px;
   
           width: 92px;
           height: 16px;
