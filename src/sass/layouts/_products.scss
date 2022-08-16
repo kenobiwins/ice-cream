@@ -46,10 +46,18 @@
 }
 
 .product {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  height: 100%;
   position: relative;
   padding: 140 39 40 41;
-  background-color: var(--card-color-first);
   border-radius: 24px;
+
+  &-cream {
+    background-color: var(--card-color-first);
+  }
 
   &-coffee {
     background-color: var(--card-color-second);
@@ -67,10 +75,42 @@
     padding: 165 62 60 61;
   }
 }
+
+.back-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 160 39 40 41;
+  // background-color: var(--card-color-first);
+  border-radius: 24px;
+  // flex-grow: 1;
+  @include mq(tablet) {
+    padding: 118 32 40 32;
+  }
+
+  @include mq(desktop) {
+    padding: 165 62 60 61;
+  }
+}
+
+.back-product__list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+
+  text-align: center;
+  color: #972929;
+
+  @include fonts(20px, 21px, 700, 0.04em);
+}
+
 .front {
-  // position: absolute;
   transition: 1s;
   backface-visibility: hidden;
+  height: 100%;
 }
 
 .card {
@@ -79,31 +119,20 @@
 }
 
 .back {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
-  padding: 140 39 40 41;
-  // background-color: var(--card-color-first);
-  border-radius: 24px;
 
+  transform: rotateY(180deg);
   transition: 1s;
   backface-visibility: hidden;
   & img {
     transform: rotate(180deg);
   }
 }
-.front {
-  // background-color: #fff;
-}
-.back {
-  background-color: #bdbdbd;
-  transform: rotateY(180deg);
-}
+
 input[type='checkbox'] {
   position: absolute;
   bottom: 0;
