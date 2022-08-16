@@ -1,4 +1,5 @@
 body {
+  min-width: 320px;
   font-family: 'DM Sans', sans-serif;
   @include fonts(16px, 30px, 500, 0.04em);
 }

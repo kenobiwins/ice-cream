@@ -1,6 +1,8 @@
 <section class="hero" id="home">
   <div class="container hero__container">
     <div class="hero__ice-cream">
+      <!-- <div class="hero__pic-box animate__animated animate__rotateInUpLeft"> -->
+        <!-- <div class="animate__animated animate__jackInTheBox animate__bounce"> -->
       <picture>
         <source
           srcset="
@@ -84,7 +86,6 @@
         </div>
       </div>
     </div>
-
     <div class="hero__bottom-line">
       <div class="hero__milk">
         <picture>
@@ -99,7 +100,7 @@
           <source
             srcset="
               ./images/hero/desktop/slider-pic2.png    1x,
-              ./images/hero/desktop/slider-pic1@2x.png 2x
+              ./images/hero/desktop/slider-pic2@2x.png 2x
             "
             media="(min-width:1200px)"
             type="image/png"
@@ -137,7 +138,22 @@
           </button>
         </div>
       </div>
-      <div class="hero__girl">
+
+      <div class="hero__girl animate__animated animate__slideInRight">
+        <!-- <div class="hero__girl-box animate__animated animate__slideInRight"> -->
+          <div class="drops">
+            <div class="drops__drop1"></div>
+            <div class="drops__drop2"></div>
+            <svg class="drops__filter" xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <defs>
+                <filter id="liquid">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                    result="liquid" />
+                </filter>
+              </defs>
+            </svg>
+          </div>
         <picture>
           <source
             srcset="

@@ -12,44 +12,6 @@
 
 .footer-tagline-container {
   margin-bottom: 40px;
-
-  &:hover {
-    position: relative;
-    top: 19px;
-
-    -webkit-animation: bounce 0.3s ease infinite alternate;
-    animation: bounce 0.3s ease infinite alternate;
-
-    color: var(--accent-font-color);
-    text-shadow: 0 1px 0 #d0cbcb, 0 2px 0 #c7c3c3, 0 3px 0 #cecaca,
-      0 4px 0 #cecdcd, 0 5px 0 #ccc8c8, 0 6px 0 transparent, 0 7px 0 transparent,
-      0 8px 0 transparent, 0 9px 0 transparent, 0 10px 0 transparent,
-      0 11px 0 transparent, 0 12px 0 transparent, 0 13px 0 transparent,
-      0 14px 0 transparent, 0 15px 0 transparent,
-      0 10px 10px rgba(12, 12, 12, 0.42);
-
-    @-webkit-keyframes bounce {
-      100% {
-        top: -20px;
-        text-shadow: 0 1px 0 #bfbebe, 0 2px 0 #bfbebe, 0 3px 0 #bfbebe,
-          0 4px 0 #bfbebe, 0 5px 0 #bfbebe, 0 6px 0 #bfbebe, 0 7px 0 #bfbebe,
-          0 8px 0 #bfbebe, 0 9px 0 #bfbebe, 0 10px 0 #bfbebe, 0 11px 0 #bfbebe,
-          0 12px 0 #bfbebe, 0 13px 0 #bfbebe, 0 14px 0 #bfbebe, 0 15px 0 #bfbebe,
-          0 50px 25px rgba(19, 18, 18, 0.23);
-      }
-    }
-
-    @keyframes bounce {
-      100% {
-        top: -20px;
-        text-shadow: 0 1px 0 #bfbebe, 0 2px 0 #bfbebe, 0 3px 0 #bfbebe,
-          0 4px 0 #bfbebe, 0 5px 0 #bfbebe, 0 6px 0 #bfbebe, 0 7px 0 #bfbebe,
-          0 8px 0 #bfbebe, 0 9px 0 #bfbebe, 0 10px 0 #bfbebe, 0 11px 0 #bfbebe,
-          0 12px 0 #bfbebe, 0 13px 0 #bfbebe, 0 14px 0 #bfbebe, 0 15px 0 #bfbebe,
-          0 50px 25px rgba(10, 10, 10, 0.21);
-      }
-    }
-  }
 }
 
 .footer__tagline {
