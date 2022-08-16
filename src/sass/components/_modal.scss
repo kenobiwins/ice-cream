@@ -1,4 +1,4 @@
-.modal__buy {
+.modal {
   position: absolute;
   overflow: auto;
   top: 50%;
@@ -7,7 +7,7 @@
 
   width: 100%;
   max-width: 450px;
-  height: 100vh;
+  height: auto;
 
   padding: 20px;
 
@@ -30,7 +30,6 @@
 
   @include mq(tablet) {
     max-width: 500px;
-    height: auto;
     padding: 20px 50px;
 
     background-image: linear-gradient(
@@ -53,10 +52,20 @@
       url(../images/hero/mobile/slider-pic1.png);
   }
 }
+
+.modal__buy {
+  width: 100%;
+  max-width: 450px;
+  height: 95vh;
+
+  @include mq(tablet) {
+    height: auto;
+  }
+}
 .modal__discount {
   font-family: Titan One, cursive;
   text-align: center;
-  @include fonts(20px, 32px, 500);
+  @include fonts(20px, 28px, 500);
   color: var(--white-color);
 
   -webkit-background-clip: text;
@@ -162,7 +171,7 @@
 }
 
 .form {
-  margin-top: 10px;
+  margin-top: 5px;
 
   &__order:not(:last-child) {
     margin-bottom: 10px;
@@ -315,58 +324,4 @@
 .button__modal {
   display: block;
   margin: 0 auto;
-}
-.modal {
-  position: absolute;
-  overflow: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  width: 100%;
-  max-width: 450px;
-  height: auto;
-
-  padding: 20px;
-
-  background-color: var(--background-mobile-menu);
-  background-image: linear-gradient(
-      to right,
-      rgba(225, 121, 146, 0.7),
-      rgba(225, 121, 146, 0.9)
-    ),
-    url(../images/hero/mobile/slider-pic1.png);
-  background-repeat: no-repeat;
-  background-position-x: -5px;
-  background-position-y: 40px;
-  background-size: 65%;
-  box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
-    0px 1px 3px 0px #0000001f;
-
-  border: none;
-  border-radius: 8px;
-
-  @include mq(tablet) {
-    max-width: 500px;
-    padding: 20px 50px;
-
-    background-image: linear-gradient(
-        to right,
-        rgba(225, 121, 146, 0.8),
-        rgba(225, 121, 146, 0.7)
-      ),
-      url(../images/hero/mobile/slider-pic1.png);
-    background-position-x: 290px;
-    background-position-y: 50px;
-    background-size: 50%;
-  }
-
-  @include mq(desktop) {
-    background-image: linear-gradient(
-        to right,
-        rgba(225, 121, 146, 0.6),
-        rgba(225, 121, 146, 0.5)
-      ),
-      url(../images/hero/mobile/slider-pic1.png);
-  }
 }
