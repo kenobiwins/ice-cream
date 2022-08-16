@@ -56,7 +56,7 @@
 .modal__buy {
   width: 100%;
   max-width: 450px;
-  height: 95vh;
+  max-height: 95vh;
 
   @include mq(tablet) {
     height: auto;
