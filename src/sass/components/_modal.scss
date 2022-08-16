@@ -44,6 +44,7 @@
   }
 
   @include mq(desktop) {
+    overflow: visible;
     background-image: linear-gradient(
         to right,
         rgba(225, 121, 146, 0.6),
