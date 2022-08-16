@@ -1,8 +1,10 @@
 <section class="hero" id="home">
   <div class="container hero__container">
-    <div class="hero__ice-cream animate__animated animate__rotateInUpLeft animate__jackInTheBox animate__bounce">
+    <div
+      class="hero__ice-cream animate__animated animate__rotateInUpLeft animate__jackInTheBox animate__bounce"
+    >
       <!-- <div class="hero__pic-box animate__animated animate__rotateInUpLeft"> -->
-        <!-- <div class="animate__animated animate__jackInTheBox animate__bounce"> -->
+      <!-- <div class="animate__animated animate__jackInTheBox animate__bounce"> -->
       <picture>
         <source
           srcset="
@@ -54,7 +56,8 @@
           media="(max-width:767px)"
           type="image/png"
         />
-        <img class="animate__animated animate__pulse animate__slower animate__infinite"
+        <img
+          class="animate__animated animate__pulse animate__slower animate__infinite"
           src="./images/hero/mobile/slider-pic1.png "
           alt="ice cream"
           loading="lazy"
@@ -67,8 +70,8 @@
           <span class="hero__title-wrapper--color">ice cream made with </span>
           <span class="hero__title-wrapper--size">passion</span>
         </h1>
-        <button class="hero__button button button--red">Products</button>
-        <button class="hero__button button">How it’s made?</button>
+        <a class="hero__button button button--red" href="#products">Products</a>
+        <a class="hero__button button" href="#howmade">How it’s made?</a>
       </div>
       <div class="hero__number">
         <div class="hero__cafes">
@@ -137,19 +140,31 @@
 
       <div class="hero__girl animate__animated animate__slideInRight">
         <!-- <div class="hero__girl-box animate__animated animate__slideInRight"> -->
-          <div class="drops">
-            <div class="drops__drop1"></div>
-            <div class="drops__drop2"></div>
-            <svg class="drops__filter" xmlns="http://www.w3.org/2000/svg" version="1.1">
-              <defs>
-                <filter id="liquid">
-                  <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                  <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
-                    result="liquid" />
-                </filter>
-              </defs>
-            </svg>
-          </div>
+        <div class="drops">
+          <div class="drops__drop1"></div>
+          <div class="drops__drop2"></div>
+          <svg
+            class="drops__filter"
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+          >
+            <defs>
+              <filter id="liquid">
+                <feGaussianBlur
+                  in="SourceGraphic"
+                  stdDeviation="10"
+                  result="blur"
+                />
+                <feColorMatrix
+                  in="blur"
+                  type="matrix"
+                  values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                  result="liquid"
+                />
+              </filter>
+            </defs>
+          </svg>
+        </div>
         <picture>
           <source
             srcset="
