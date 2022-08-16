@@ -91,13 +91,13 @@
     display: flex;
     position: fixed;
     right: 21px;
+    padding: 10px 53px;
     transform: translateY(0);
 
     .menu-button.is-open ~ & {
       transform: translateY(50px);
       opacity: 1;
       pointer-events: all;
-      padding: 10px 53px;
     }
   }
   @include mq(tablet) {
