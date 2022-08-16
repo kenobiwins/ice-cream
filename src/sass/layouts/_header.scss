@@ -44,10 +44,10 @@
   z-index: 100;
   @include fonts(14px, 18px, 700);
   background-color: var(--background-mobile-menu);
+  transition: transform var(--transition), opacity var(--transition);
 
   @include mq(mobile) {
     right: 0;
-    opacity: 1;
     height: 100vh;
   }
   @include mq(tablet) {
