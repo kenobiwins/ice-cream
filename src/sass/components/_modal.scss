@@ -30,7 +30,6 @@
 
   @include mq(tablet) {
     max-width: 500px;
-    height: auto;
     padding: 20px 50px;
 
     background-image: linear-gradient(
