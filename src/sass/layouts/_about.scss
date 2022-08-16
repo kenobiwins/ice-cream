@@ -168,12 +168,13 @@
   color: var(--background-section-primary);
 }
 .modal-iframe {
-  margin-top: 50px;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
 
-
-  
-
+}
+.ifreme {
+  border: none;
 }

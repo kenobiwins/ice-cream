@@ -84,6 +84,7 @@ a {
 }
 
 .backdrop {
+  min-width: 320px;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -96,6 +97,7 @@ a {
 }
 
 body {
+  min-width: 320px;
   font-family: "DM Sans", sans-serif;
   font-size: 16px;
   line-height: 1.875;
@@ -539,7 +541,7 @@ body {
   transform: translate(-50%, -50%);
   width: 100%;
   max-width: 450px;
-  height: 100vh;
+  height: auto;
   padding: 20px;
   background-color: var(--background-mobile-menu);
   background-image: linear-gradient(to right, rgba(225, 121, 146, 0.7), rgba(225, 121, 146, 0.9)), url(../images/hero/mobile/slider-pic1.png);
@@ -1131,11 +1133,30 @@ body {
 }
 .site-nav__link {
   padding: 13px 0;
+  position: relative;
 }
 @media screen and (min-width: 1200px) {
   .site-nav__link {
     padding: 16px 0;
   }
+}
+.site-nav__link::before {
+  position: absolute;
+  top: 22%;
+  left: 50%;
+  width: 0;
+  border-radius: 9px;
+  background-color: var(--white-color);
+  transition: width var(--transition), left var(--transition);
+  z-index: -1;
+  content: "";
+}
+.site-nav__link::before {
+  height: 29px;
+}
+.site-nav__link:hover::before {
+  left: -10%;
+  width: 120%;
 }
 
 .site-nav__item {
@@ -1155,11 +1176,11 @@ body {
 
 .hero {
   background-color: var(--background-primary-color);
+  overflow: hidden;
 }
 
 .hero__container {
   position: relative;
-  overflow: hidden;
 }
 
 .hero__title {
@@ -1190,6 +1211,16 @@ body {
   right: 32px;
   z-index: 1;
   display: flex;
+  -webkit-animation-name: transition-ice-cream;
+          animation-name: transition-ice-cream;
+  -webkit-animation-duration: 900ms;
+          animation-duration: 900ms;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
 }
 .hero__ice-cream::before {
   content: "";
@@ -1204,6 +1235,29 @@ body {
   z-index: -1;
 }
 
+@-webkit-keyframes transition-ice-cream {
+  0% {
+    transform: scale(0.6);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes transition-ice-cream {
+  0% {
+    transform: scale(0.6);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .hero__button {
   font-size: 8px;
   line-height: 1.25;
@@ -1307,6 +1361,32 @@ body {
   .hero__milk {
     display: flex;
     margin-bottom: 16px;
+    -webkit-animation-name: transition-milk;
+            animation-name: transition-milk;
+    -webkit-animation-duration: 500ms;
+            animation-duration: 500ms;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+  }
+  @-webkit-keyframes transition-milk {
+    0% {
+      transform: translatex(-200px);
+    }
+    100% {
+      transform: translatex(0);
+    }
+  }
+  @keyframes transition-milk {
+    0% {
+      transform: translatex(-200px);
+    }
+    100% {
+      transform: translatex(0);
+    }
   }
   .hero__lorem {
     display: flex;
@@ -1350,6 +1430,124 @@ body {
   }
   .hero__button:not(:last-child) {
     margin-right: 8px;
+  }
+  .drops {
+    filter: url(#liquid);
+    z-index: -1;
+    opacity: 0;
+    -webkit-animation: fade-in 0.1s linear 0.4s forwards;
+            animation: fade-in 0.1s linear 0.4s forwards;
+    position: absolute;
+    bottom: 75px;
+    left: 72px;
+    justify-content: center;
+  }
+  .drops__filter {
+    display: none;
+  }
+  .drops__drop1, .drops__drop2 {
+    left: -66px;
+    right: 0;
+    bottom: 0;
+    width: 20px;
+    height: 26px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    margin: auto;
+    position: absolute;
+  }
+  .drops__drop1 {
+    bottom: 10px;
+    width: 56px;
+    height: 17px;
+    border-radius: 0;
+  }
+  .drops__drop2 {
+    -webkit-animation: drop 1.3s cubic-bezier(1, 0.19, 0.66, 0.12) 0.5s infinite;
+            animation: drop 1.3s cubic-bezier(1, 0.19, 0.66, 0.12) 0.5s infinite;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .drops {
+    bottom: 122px;
+    left: 100px;
+  }
+  .drops__drop1 {
+    bottom: 10px;
+    width: 92px;
+    height: 16px;
+  }
+  .drops__drop1, .drops__drop2 {
+    height: 32px;
+    border-radius: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  @-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  @-webkit-keyframes drop {
+    0% {
+      bottom: 0px;
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+      bottom: -200px;
+    }
+  }
+  @keyframes drop {
+    0% {
+      bottom: 0px;
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+      bottom: -200px;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  @-webkit-keyframes wave {
+    0% {
+      background-position: 0 160px;
+      background-size: 170px 300px;
+    }
+    100% {
+      background-position: 500px -18px;
+      background-size: 250px 150px;
+    }
+  }
+  @keyframes wave {
+    0% {
+      background-position: 0 160px;
+      background-size: 170px 300px;
+    }
+    100% {
+      background-position: 500px -18px;
+      background-size: 250px 150px;
+    }
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1400,32 +1598,6 @@ body {
   .hero__milk {
     display: flex;
     margin-bottom: 60px;
-    -webkit-animation-name: transition-milk;
-            animation-name: transition-milk;
-    -webkit-animation-duration: 500ms;
-            animation-duration: 500ms;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-    -webkit-animation-direction: normal;
-            animation-direction: normal;
-  }
-  @-webkit-keyframes transition-milk {
-    0% {
-      transform: translatex(-200px);
-    }
-    100% {
-      transform: translatex(0);
-    }
-  }
-  @keyframes transition-milk {
-    0% {
-      transform: translatex(-200px);
-    }
-    100% {
-      transform: translatex(0);
-    }
   }
   .hero__lorem {
     display: flex;
@@ -1444,44 +1616,12 @@ body {
   }
   .hero__ice-cream {
     left: 636px;
-    -webkit-animation-name: transition-ice-cream;
-            animation-name: transition-ice-cream;
-    -webkit-animation-duration: 900ms;
-            animation-duration: 900ms;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-    -webkit-animation-direction: normal;
-            animation-direction: normal;
   }
   .hero__ice-cream::before {
     top: -54px;
     left: -119px;
     width: 534px;
     height: 534px;
-  }
-  @-webkit-keyframes transition-ice-cream {
-    0% {
-      transform: scale(0.6);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  @keyframes transition-ice-cream {
-    0% {
-      transform: scale(0.6);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
   }
   .hero__girl {
     display: flex;
@@ -2037,10 +2177,15 @@ body {
 }
 
 .modal-iframe {
-  margin-top: 50px;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
+}
+
+.ifreme {
+  border: none;
 }
 
 .advantages {
@@ -2692,8 +2837,6 @@ body {
   width: 97vw;
   height: auto;
   overflow-y: auto;
-  background-image: linear-gradient(to right, rgba(255, 184, 202, 0.9), rgba(255, 184, 202, 0.7)), url(../images/hero/mobile/slider-pic1.png);
-  background-repeat: no-repeat;
 }
 @media screen and (max-width: 767px) {
   .contacts-modal {
@@ -2873,26 +3016,6 @@ body {
 
 .footer-tagline-container {
   margin-bottom: 40px;
-}
-.footer-tagline-container:hover {
-  position: relative;
-  top: 19px;
-  -webkit-animation: bounce 0.3s ease infinite alternate;
-  animation: bounce 0.3s ease infinite alternate;
-  color: var(--accent-font-color);
-  text-shadow: 0 1px 0 #d0cbcb, 0 2px 0 #c7c3c3, 0 3px 0 #cecaca, 0 4px 0 #cecdcd, 0 5px 0 #ccc8c8, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent, 0 9px 0 transparent, 0 10px 0 transparent, 0 11px 0 transparent, 0 12px 0 transparent, 0 13px 0 transparent, 0 14px 0 transparent, 0 15px 0 transparent, 0 10px 10px rgba(12, 12, 12, 0.42);
-}
-@-webkit-keyframes bounce {
-  100% {
-    top: -20px;
-    text-shadow: 0 1px 0 #bfbebe, 0 2px 0 #bfbebe, 0 3px 0 #bfbebe, 0 4px 0 #bfbebe, 0 5px 0 #bfbebe, 0 6px 0 #bfbebe, 0 7px 0 #bfbebe, 0 8px 0 #bfbebe, 0 9px 0 #bfbebe, 0 10px 0 #bfbebe, 0 11px 0 #bfbebe, 0 12px 0 #bfbebe, 0 13px 0 #bfbebe, 0 14px 0 #bfbebe, 0 15px 0 #bfbebe, 0 50px 25px rgba(19, 18, 18, 0.23);
-  }
-}
-@keyframes bounce {
-  100% {
-    top: -20px;
-    text-shadow: 0 1px 0 #bfbebe, 0 2px 0 #bfbebe, 0 3px 0 #bfbebe, 0 4px 0 #bfbebe, 0 5px 0 #bfbebe, 0 6px 0 #bfbebe, 0 7px 0 #bfbebe, 0 8px 0 #bfbebe, 0 9px 0 #bfbebe, 0 10px 0 #bfbebe, 0 11px 0 #bfbebe, 0 12px 0 #bfbebe, 0 13px 0 #bfbebe, 0 14px 0 #bfbebe, 0 15px 0 #bfbebe, 0 50px 25px rgba(10, 10, 10, 0.21);
-  }
 }
 
 .footer__tagline {
