@@ -17,8 +17,6 @@
   }
 }
 
-
-
 .about__label {
   text-align: center;
   margin-bottom: 15px;
@@ -38,12 +36,14 @@
 .about__wrapper {
   @include mq(tablet) {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+
     justify-content: center;
     gap: 32px;
   }
   @include mq(desktop) {
     gap: 99px;
+    align-items: flex-end;
   }
 }
 
@@ -159,7 +159,7 @@
 
   &:hover,
   &:focus {
-    background-color: var(--text-button)
+    background-color: var(--text-button);
   }
 }
 .modal-title {
@@ -172,8 +172,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-
-  
-
 }
