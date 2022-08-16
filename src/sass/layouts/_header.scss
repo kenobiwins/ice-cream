@@ -14,7 +14,13 @@
   display: flex;
   align-items: center;
 }
-
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  @include mq(desktop) {
+    flex-direction: row-reverse;
+  }
+}
 .menu-button.is-open {
   position: fixed;
   @include mq(mobile) {
@@ -28,12 +34,12 @@
 }
 
 .header__menu {
-  width: 250px;
+  width: 254px;
   position: absolute;
   top: 0;
   position: fixed;
   transform: translate(0, -100%);
-  padding-top: 58px;
+  padding-top: 122px;
   opacity: 0;
   z-index: 100;
   @include fonts(14px, 18px, 700);
@@ -74,32 +80,39 @@
 .header__button {
   display: flex;
   align-items: center;
-  z-index: 20;
-  @media screen and (max-width: 1199px) {
-    padding: 10px 43px;
-    gap: 14px;
-  }
-}
-.header__button--tab-desk {
+  white-space: nowrap;
+  z-index: 120;
+  padding: 10px 43px;
+  gap: 14px;
+  transition: transform var(--transition), opacity var(--transition);
   @include mq(mobile) {
-    display: none;
+    pointer-events: none;
+    opacity: 0;
+    display: flex;
+    position: fixed;
+    right: 21px;
+    transform: translateY(0);
+
+    .menu-button.is-open ~ & {
+      transform: translateY(50px);
+      opacity: 1;
+      pointer-events: all;
+      padding: 10px 53px;
+    }
   }
   @include mq(tablet) {
     margin-left: 32px;
     padding: 10px 32px;
     @include mq(desktop) {
-      display: none;
+      margin-left: 141px;
+      display: flex;
     }
     .menu-button.is-open ~ & {
-      display: none;
+      position: fixed;
+      right: 34px;
+      transform: translate(-10px, 34px);
+      margin: 0;
     }
-  }
-}
-.header__button--mobile {
-  @media screen and (max-width: 1199px) {
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 19px;
   }
 }
 
