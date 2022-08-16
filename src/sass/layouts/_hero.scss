@@ -1,12 +1,9 @@
 .hero {
   background-color: var(--background-primary-color);
+  overflow: hidden;
 }
 .hero__container {
   position: relative;
-
-  // display: flex;
-  // flex-direction: column;
-  overflow: hidden;
 }
 
 .hero__title {
@@ -50,6 +47,25 @@
     border-radius: 50%;
     background-color: var(--background-secondary-color);
     z-index: -1;
+  }
+  animation-name: transition-ice-cream;
+  animation-duration: 900ms;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+
+@keyframes transition-ice-cream {
+  0% {
+    transform: scale(0.6);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -164,7 +180,22 @@
   .hero__milk {
     display: flex;
     margin-bottom: 16px;
+    animation-name: transition-milk;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: normal;
   }
+  @keyframes transition-milk {
+    0% {
+      transform: translatex(-200px);
+    }
+
+    100% {
+      transform: translatex(0);
+    }
+  }
+
   .hero__lorem {
     display: flex;
     flex-direction: column;
@@ -212,6 +243,105 @@
   .hero__button {
     &:not(:last-child) {
       margin-right: 8px;
+    }
+  }
+
+  // Anime by Ihor
+  .drops {
+    -webkit-filter: url(#liquid);
+    filter: url(#liquid);
+    z-index: -1;
+    opacity: 0;
+    animation: fade-in 0.1s linear 0.4s forwards;
+    position: absolute;
+    bottom: 75px;
+    left: 72px;
+    justify-content: center;
+
+    &__filter {
+      display: none;
+    }
+
+    &__drop1,
+    &__drop2 {
+      left: -66px;
+      right: 0;
+      bottom: 0;
+      width: 20px;
+      height: 26px;
+
+      background-color: var(--white-color);
+      border-radius: 50%;
+      margin: auto;
+      position: absolute;
+    }
+
+    &__drop1 {
+      bottom: 10px;
+      width: 56px;
+      height: 17px;
+
+      border-radius: 0;
+    }
+
+    &__drop2 {
+      animation: drop 1.3s cubic-bezier(1, 0.19, 0.66, 0.12) 0.5s infinite;
+    }
+
+    @include mq('tablet') {
+    }
+
+    @include mq('desktop') {
+      bottom: 122px;
+      left: 100px;
+
+      &__drop1 {
+        bottom: 10px;
+
+        width: 92px;
+        height: 16px;
+      }
+
+      &__drop1,
+      &__drop2 {
+        height: 32px;
+        border-radius: 0;
+      }
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes drop {
+    0% {
+      bottom: 0px;
+      opacity: 1;
+    }
+
+    80% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+      bottom: -200px;
+    }
+  }
+  @keyframes wave {
+    0% {
+      background-position: 0 160px;
+      background-size: 170px 300px;
+    }
+
+    100% {
+      background-position: 500px -18px;
+      background-size: 250px 150px;
     }
   }
 }
@@ -273,20 +403,6 @@
   .hero__milk {
     display: flex;
     margin-bottom: 60px;
-
-    animation-name: transition-milk;
-    animation-duration: 500ms;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-  }
-  @keyframes transition-milk {
-    0% {
-      transform: translatex(-200px);
-    }
-    100% {
-      transform: translatex(0);
-    }
   }
 
   .hero__lorem {
@@ -314,23 +430,6 @@
       left: -119px;
       width: 534px;
       height: 534px;
-    }
-    animation-name: transition-ice-cream;
-    animation-duration: 900ms;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-  }
-  @keyframes transition-ice-cream {
-    0% {
-      transform: scale(0.6);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-
-    100% {
-      transform: scale(1);
     }
   }
 
