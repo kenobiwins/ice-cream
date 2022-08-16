@@ -1,16 +1,329 @@
 .modal {
-  width: 528px;
-  padding: 40px;
+  position: absolute;
+  overflow: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-  background-color: var(--background-primary-color);
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+
+  padding: 20px;
+
+  background-color: var(--background-mobile-menu);
+  background-image: linear-gradient(
+      to right,
+      rgba(225, 121, 146, 0.7),
+      rgba(225, 121, 146, 0.9)
+    ),
+    url(../images/hero/mobile/slider-pic1.png);
+  background-repeat: no-repeat;
+  background-position-x: -5px;
+  background-position-y: 40px;
+  background-size: 65%;
   box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
     0px 1px 3px 0px #0000001f;
 
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
 
+  @include mq(tablet) {
+    max-width: 500px;
+    padding: 20px 50px;
+
+    background-image: linear-gradient(
+        to right,
+        rgba(225, 121, 146, 0.8),
+        rgba(225, 121, 146, 0.7)
+      ),
+      url(../images/hero/mobile/slider-pic1.png);
+    background-position-x: 290px;
+    background-position-y: 50px;
+    background-size: 50%;
+  }
+
+  @include mq(desktop) {
+    overflow: visible;
+    background-image: linear-gradient(
+        to right,
+        rgba(225, 121, 146, 0.6),
+        rgba(225, 121, 146, 0.5)
+      ),
+      url(../images/hero/mobile/slider-pic1.png);
+  }
+}
+
+.modal__buy {
+  width: 100%;
+  max-width: 450px;
+  max-height: 95vh;
+
+  @include mq(tablet) {
+    height: auto;
+  }
+}
+.modal__discount {
+  font-family: Titan One, cursive;
+  text-align: center;
+  @include fonts(20px, 28px, 500);
+  color: var(--white-color);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-name: changeBgColor;
+  animation-duration: 6500ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+  @include mq(tablet) {
+    @include fonts(24px, 30px, 500);
+  }
+}
+@keyframes changeBgColor {
+  0% {
+    background-color: var(--background-primary-color);
+  }
+
+  50% {
+    background-color: var(--white-font-color);
+  }
+
+  100% {
+    background-color: var(--accent-font-color);
+  }
+}
+
+.checkbox {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  margin: -1px;
+
+  &__lable {
+    display: block;
+
+    @include fonts(16px, 28px, 500);
+    color: var(--white-color);
+  }
+}
+
+.checkbox + label {
+  position: relative;
+  padding: 0 0 0 65px;
+
+  cursor: pointer;
+}
+
+.checkbox + label:before {
+  content: '';
+  position: absolute;
+  top: 5;
+  left: 210px;
+  width: 38px;
+  height: 20px;
+
+  border-radius: 13px;
+  background: var(--background-button-hover);
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+
+  @include mq(tablet) {
+    left: 241px;
+  }
+}
+.checkbox + label:after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 212px;
+  width: 18px;
+  height: 18px;
+  border-radius: 10px;
+  background: var(--reverse-background-button);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: 0.2s;
+
+  @include mq(tablet) {
+    left: 242px;
+  }
+}
+.checkbox:checked + label:before {
+  background: var(--icon-background);
+}
+.checkbox:checked + label:after {
+  left: 230px;
+
+  @include mq(tablet) {
+    left: 259px;
+  }
+}
+.checkbox:focus + label:before {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2),
+    0 0 0 2px rgba(194, 226, 151, 0.7);
+}
+
+.form {
+  margin-top: 5px;
+
+  &__order:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__options {
+    @include fonts(20px, 26px, 500);
+    color: var(--white-color);
+
+    @include mq(tablet) {
+      @include fonts(22px, 28px, 500);
+    }
+  }
+
+  &__ammount {
+    display: flex;
+    align-items: center;
+
+    padding-left: 65px;
+  }
+
+  &__amount-title {
+    margin-right: 29px;
+    @include fonts(16px, 28px, 500);
+    color: var(--white-color);
+
+    @include mq(tablet) {
+      margin-right: 60px;
+    }
+  }
+
+  &__amount-counter {
+    width: 37px;
+    height: 22px;
+
+    text-align: center;
+    border-radius: 6px;
+    background-color: var(--background-button-hover);
+    outline: none;
+    border: 2px solid var(--reverse-background-button);
+
+    &:focus,
+    &:active {
+      border: 2px solid var(--background-secondary-color);
+    }
+  }
+
+  //  personal data
+
+  &__group-peculiars {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 15px;
+  }
+
+  &__lable {
+    position: relative;
+  }
+
+  &__options {
+    text-align: center;
+  }
+
+  &__text {
+    position: absolute;
+    bottom: 20px;
+    left: 12px;
+
+    @include fonts(14px, 26px, 400);
+    color: var(--white-color);
+  }
+  &__text-textarea {
+    position: absolute;
+    left: 12px;
+    bottom: 61px;
+
+    @include fonts(14px, 26px, 400);
+    color: var(--white-color);
+  }
+
+  &__input {
+    width: 100%;
+    padding: 5px 12px;
+
+    border: 1px solid var(--accent-font-color);
+    border-radius: 4px;
+    outline: none;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__input:focus,
+  &__input:active {
+    border: none;
+    outline: 1px solid var(--background-secondary-color);
+    box-shadow: 1px 3px 3px rgba(255, 184, 202, 0.3),
+      1px 3px 3px rgba(255, 184, 202, 0.3);
+  }
+}
+
+.textarea {
+  height: 60px;
+  resize: none;
+  padding: 10px;
+}
+
+//  buttons
+
+.modal-close {
+  display: flex;
+  position: absolute;
+
+  top: 9px;
+  right: 9px;
+  width: 28px;
+  height: 28px;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 0px 1px 0px var(--white-font-color);
+
+  background-color: var(--background-mobile-menu);
+  transition: border-color var(--transition), transform;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: var(--background-button-hover);
+    border-color: var(--background-button-hover);
+    box-shadow: 0px 0px 3px 0px var(--background-button-hover),
+      0px 0px 3px 0px var(--background-button-hover),
+      0px 1px 1px 0px var(--background-button-hover);
+    transform: scale(1.1);
+    transition-duration: 1000ms;
+  }
+  &:hover &__icon,
+  &:focus &__icon {
+    fill: var(--background-button-hover);
+  }
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+    transition: fill var(--transition);
+  }
+}
+
+.button__modal {
+  display: block;
+  margin: 0 auto;
 }

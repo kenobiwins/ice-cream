@@ -1,0 +1,136 @@
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal modal__buy">
+    <button class="modal-close" data-modal-btn="close" type="button">
+      <svg class="modal-close__icon">
+        <use
+          href="./images/sprite.svg#icon-close"
+          width="14px"
+          height="14px"
+        ></use>
+      </svg>
+    </button>
+    <p class="modal__discount">Get 10% off with your first purchase</p>
+    <form class="form">
+      <p class="form__options">Choose a product</p>
+      <div class="form__group" role="group">
+        <div class="form__order">
+          <input
+            class="checkbox visually-hidden"
+            type="checkbox"
+            name="product"
+            value="ice cream"
+            id="ice-crem"
+          />
+          <label class="checkbox__lable" for="ice-crem">ice cream</label>
+
+          <label class="form__ammount">
+            <span class="form__amount-title">order quantity</span>
+            <input
+              class="form__amount-counter"
+              type="number"
+              name="amount"
+              required
+              min="0"
+              max="10"
+            />
+          </label>
+        </div>
+        <div class="form__order">
+          <input
+            class="checkbox visually-hidden"
+            type="checkbox"
+            name="product"
+            value="Ice coffee"
+            id="ice-coffee"
+          />
+          <label class="checkbox__lable" for="ice-coffee">ice coffee</label>
+
+          <label class="form__ammount">
+            <span class="form__amount-title">order quantity</span>
+            <input
+              class="form__amount-counter"
+              type="number"
+              name="amount"
+              required
+              min="0"
+              max="10"
+            />
+          </label>
+        </div>
+        <div class="form__order">
+          <input
+            class="checkbox visually-hidden"
+            type="checkbox"
+            name="product"
+            value="milkshake"
+            id="milkshake"
+          />
+
+          <label class="checkbox__lable" for="milkshake">milkshake</label>
+          <label class="form__ammount">
+            <span class="form__amount-title">order quantity</span>
+            <input
+              class="form__amount-counter"
+              type="number"
+              name="amount"
+              required
+              min="0"
+              max="10"
+            />
+          </label>
+        </div>
+      </div>
+
+      <div class="form__group-peculiars" role="group">
+        <div class="form__contacts">
+          <label class="form__lable">
+            <span class="form__text">Your name</span>
+            <input
+              class="form__input"
+              type="text"
+              name="name"
+              placeholder="Jane Smith"
+              autofocus
+              required
+            />
+          </label>
+        </div>
+        <div class="form__contacts">
+          <label class="form__lable">
+            <span class="form__text">Email address</span>
+            <input
+              class="form__input"
+              type="email"
+              name="user-email"
+              placeholder="janesmith@mail.com"
+              required
+            />
+          </label>
+        </div>
+        <div class="form__contacts">
+          <label class="form__lable">
+            <span class="form__text">Phone number</span>
+            <input
+              class="form__input"
+              type="tel"
+              name="tel"
+              placeholder="+610383766282"
+              required
+            />
+          </label>
+        </div>
+        <div class="form__contacts">
+          <label class="form__lable">
+            <span class="form__text-textarea">Leave us your comment</span>
+            <textarea
+              class="form__input textarea"
+              name="comment"
+              placeholder="write your comment here"
+            ></textarea>
+          </label>
+        </div>
+      </div>
+      <button class="button button__modal" type="submit">Buy now</button>
+    </form>
+  </div>
+</div>

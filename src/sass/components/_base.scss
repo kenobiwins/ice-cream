@@ -1,4 +1,5 @@
 body {
+  min-width: 320px;
   font-family: 'DM Sans', sans-serif;
   @include fonts(16px, 30px, 500, 0.04em);
 }
@@ -14,7 +15,9 @@ body {
     );
   }
 }
-
+.button-link {
+  display: inline-block;
+}
 .button {
   padding: 11px 24px;
 
@@ -26,11 +29,14 @@ body {
 
   border: none;
   border-radius: 22px;
-  transition: color var(--transition), background-color var(--transition);
+  transition: transform var(--transition), opacity var(--transition),
+    color var(--transition), box-shadow var(--transition),
+    background-color var(--transition);
 
   &:hover,
   &:focus {
     background-color: var(--background-button-hover);
+    box-shadow: 0px 3px 6px 1px var(--reverse-background-button);
   }
 }
 .button--red {

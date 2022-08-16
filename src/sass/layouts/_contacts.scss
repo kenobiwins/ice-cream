@@ -175,17 +175,17 @@
 
 .contacts-option__icon {
   margin-left: 11px;
-     
+
   fill: var(--white-color);
 
   .button--red:hover &,
-  .button--red:focus &{
+  .button--red:focus & {
     fill: var(--text-button);
   }
 }
 
 .contacts-option__icon--red {
-  fill:currentColor;
+  fill: currentColor;
 }
 
 .backdrop {
@@ -198,32 +198,23 @@
   pointer-events: none;
 }
 
-.backdrop.is-hidden .contacts-modal{
-  transform:translate(-50%, -50%) scale(1.2);
+.backdrop.is-hidden .contacts-modal {
+  transform: translate(-50%, -50%) scale(1.2);
   opacity: 0;
-}    
+}
 
 .contacts-modal {
   padding: 30px 30px;
   max-width: 528px;
-  width: 100vw;
+  width: 97vw;
   height: auto;
   overflow-y: auto;
-  margin: 5px 0;
-   
-  background-image: linear-gradient(
-      to right,
-      rgba(255, 184, 202, 0.9),
-      rgba(255, 184, 202, 0.7)
-    ),
-    url(../images/hero/mobile/slider-pic1.png);
-  background-repeat: no-repeat; 
-  
-  @include mq(mobile){
-    padding: 0 30px;
+
+  @include mq(mobile) {
+    padding: 30px 30px 0 30px;
   }
 
-  @include mq(tablet){
+  @include mq(tablet) {
     padding: 20px 30px;
     margin-top: 8px;
   }
@@ -243,15 +234,15 @@
   background-size: contain;
   border: 1px solid var(--text-button);
   border-radius: 50%;
-  cursor:pointer;
+  cursor: pointer;
 
   &:hover,
-  &:focus{
-    background-color: var(--text-button)
+  &:focus {
+    background-color: var(--text-button);
   }
 }
 
-.contacts-modal__title{
+.contacts-modal__title {
   margin-bottom: 5px;
 
   @include fonts(24px, 34px, 700, 0.04em);
@@ -261,18 +252,16 @@
 
   color: var(--white-color);
 
-  @include mq(mobile){
-    margin-top: 30px;
-
+  @include mq(mobile) {
     @include fonts(16px, 24px);
   }
 
-  @include mq(tablet){
-    @include fonts(20px, 30px, 700, 0.04em);   
+  @include mq(tablet) {
+    @include fonts(20px, 30px, 700, 0.04em);
   }
 }
 
-.contacts-modal__text{
+.contacts-modal__text {
   @include fonts(8px, 15px);
   text-transform: uppercase;
 
@@ -284,24 +273,24 @@
   flex-direction: column;
   gap: 6px;
 
-  @include mq(mobile){
+  @include mq(mobile) {
     gap: 4px;
   }
 }
 
-.star{
+.star {
   color: var(--icon-background-accent);
 }
 
 .contacts-form__label {
   @include fonts(12px, 20px);
 
-  @include mq(mobile){
+  @include mq(mobile) {
     @include fonts(10px, 16px);
   }
 }
 
-.contacts-form__input{
+.contacts-form__input {
   width: 100%;
   padding: 5px 10px;
 
@@ -311,27 +300,27 @@
   border-radius: 5px;
 
   transition: border-color var(--transition);
-  
+
   &:hover,
-  &:focus{
-    outline:2px solid var(--text-accent);
+  &:focus {
+    outline: 2px solid var(--text-accent);
   }
 
-  @include mq(mobile){
+  @include mq(mobile) {
     @include fonts(10px, 16px);
   }
 }
 
 .contacts-form__radio {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   gap: 10px;
 
-  @include fonts (12px, 20px);
- 
-  accent-color:var(--icon-background-accent);  
+  @include fonts(12px, 20px);
 
-  @include mq(mobile){
+  accent-color: var(--icon-background-accent);
+
+  @include mq(mobile) {
     @include fonts(10px, 16px);
   }
 }
@@ -343,12 +332,12 @@
   padding: 10px 15px;
 
   min-width: 200px;
-  min-height: 44px; 
+  min-height: 44px;
 
   @include fonts(18px, 30px, 700, 0.04em);
-  text-transform: uppercase;  
+  text-transform: uppercase;
 
-  @include mq(mobile){
+  @include mq(mobile) {
     min-width: 150px;
     margin-top: 5px;
     margin-bottom: 10px;
@@ -357,9 +346,7 @@
     @include fonts(16px, 24px, 700, 0.04em);
   }
 
-  @include mq(tablet){
-    margin:0 auto;      
+  @include mq(tablet) {
+    margin: 0 auto;
   }
 }
-
-

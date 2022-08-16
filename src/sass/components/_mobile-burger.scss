@@ -31,6 +31,7 @@
     border-radius: 4px;
     background-color: var(--text-button);
     left: 0;
+    z-index: 120;
     transition: transform var(--transition), background-color var(--transition);
   }
   &::before {
