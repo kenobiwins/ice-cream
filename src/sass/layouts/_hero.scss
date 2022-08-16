@@ -49,11 +49,7 @@
     background-color: var(--background-secondary-color);
     z-index: -1;
   }
-    animation-name: transition-ice-cream;
-      animation-duration: 900ms;
-      animation-timing-function: linear;
-      animation-iteration-count: 1;
-      animation-direction: normal;
+
     }
     
     @keyframes transition-ice-cream {
@@ -178,11 +174,6 @@
   .hero__milk {
     display: flex;
     margin-bottom: 16px;
-  animation-name: transition-milk;
-    animation-duration: 500ms;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-    animation-direction: normal;
   }    
   @keyframes transition-milk {
     0% {
@@ -433,11 +424,7 @@
   .hero__girl {
     display: flex;
     z-index: 5;
-    animation-name: transition-girl;
-    animation-duration: 500ms;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-    animation-direction: normal;
+
   }
 
   @keyframes transition-girl {
