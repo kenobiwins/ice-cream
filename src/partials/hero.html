@@ -70,8 +70,15 @@
           <span class="hero__title-wrapper--color">ice cream made with </span>
           <span class="hero__title-wrapper--size">passion</span>
         </h1>
-        <a class="hero__button button button--red" href="#products">Products</a>
-        <a class="hero__button button" href="#howmade">How it’s made?</a>
+        <a
+          class="hero__button button button--red"
+          href="#products"
+          onclick="this.blur();"
+          >Products</a
+        >
+        <a class="hero__button button" href="#howmade" onclick="this.blur();"
+          >How it’s made?</a
+        >
       </div>
       <div class="hero__number">
         <div class="hero__cafes">
@@ -143,10 +150,7 @@
         <div class="drops">
           <div class="drops__drop1"></div>
           <div class="drops__drop2"></div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            version="1.1"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
             <defs>
               <filter id="liquid">
                 <feGaussianBlur
