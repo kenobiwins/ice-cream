@@ -25,4 +25,8 @@
   opacity: 0.7;
   border-radius: 50%;
   background-color: var(--reverse-accent-button);
+  transition: color var(--transition), box-shadow var(--transition);
+  &:hover {
+    box-shadow: 0px 0px 0px 6px var(--card-color-second);
+  }
 }
