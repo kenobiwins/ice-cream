@@ -54,8 +54,7 @@
       const element = refs.backdrop[back];
       element != undefined &&
         element.addEventListener('click', e => {
-          if (e.target.classList.contains('backdrop')) {
-            console.log('yes');
+          if (e.target.classList.contains('backdrop')) {            
             e.target.classList.toggle('is-hidden');
             stopAllYouTubeVideos();
           }
