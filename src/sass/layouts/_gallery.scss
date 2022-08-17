@@ -25,24 +25,22 @@
   height: 136px;
 }
 
-/* clearfix */
-/* .grid:after {
-  content: "";
-  display: block;
-  clear: both;
-} */
-
 /* ---- grid-item ---- */
 
 .grid-item {
   width: 43.59px;
   height: 43.86px;
   float: left;
-
+  transition: transform var(--transition);
+  
   /* vertical gutter */
   margin-bottom: 2.53px;
   // background: #d26;
   border-radius: 5px;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 
 .grid-item--width2 {
