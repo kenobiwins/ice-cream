@@ -138,6 +138,10 @@ input[type='checkbox'] {
   bottom: 0;
 }
 
+input[type='checkbox']:focus-within ~ div div .arrow-right {
+  box-shadow: 0px 3px 6px 1px var(--reverse-background-button);
+}
+
 input[type='checkbox']:checked ~ .front {
   transform: rotateY(180deg);
 }
@@ -371,4 +375,10 @@ input[type='checkbox']:checked ~ .back {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  transition: box-shadow var(--transition);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 3px 6px 1px var(--reverse-background-button);
+  }
 }

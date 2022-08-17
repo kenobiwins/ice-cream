@@ -142,6 +142,9 @@
   opacity: 0;
 }
 .about-modal {
+  @include mq(tablet) {
+    max-width: 600px;
+  }
   @include mq(desktop) {
     max-width: 650px;
   }
