@@ -1,3 +1,5 @@
+import Masonry from 'masonry-layout';
+
 var gut;
 
 const desktop = window.matchMedia('(min-width: 1200px)');
@@ -12,11 +14,25 @@ if (desktop.matches) {
 } else gut = 2.53;
 
 var msnry = new Masonry(elem, {
-  itemSelector: '.grid-item',
+  itemSelector: '.grid__item',
   gutter: gut,
+  // columnWidth: 30,
   stagger: 30,
-  
 });
+
+elem.addEventListener('click', function (event) {
+ 
+  // don't proceed if item was not clicked on
+  if (event.target.classList.contains('grid__img')) {
+    // change size of item via class
+    console.log();
+    event.target.closest(".grid__item").classList.toggle('grid__item--gigante');
+    // trigger layout
+    msnry.layout();
+  }
+});
+
+console.log(msnry);
 
 function setMsnry(gut) {
   msnry.options.gutter = gut;
