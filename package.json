@@ -2,10 +2,10 @@
   "name": "ice-cream",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://kenobiwins.github.io/team-project",
+  "homepage": "https://kenobiwins.github.io/ice-cream",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /team-project/"
+    "build": "parcel build src/*.html --public-url /ice-cream/"
   },
   "repository": {
     "type": "git",
